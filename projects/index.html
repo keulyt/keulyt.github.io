@@ -5,61 +5,98 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Projects | Keuly T. Yemele</title>
-  <meta name="description" content="Projects by Keuly T. Yemele - Kubernetes, DevOps automation, Terraform infrastructure, and platform engineering." />
+  <meta name="description" content="Selected Kubernetes and DevOps engineering projects by Keuly T. Yemele." />
 
   <link rel="stylesheet" href="/styles.css" />
 </head>
 
 <body>
 
+  <div class="cursor-glow" aria-hidden="true"></div>
+
   <header class="topbar">
     <a class="brand" href="/">
-      <span class="brand-dot"></span>
       <span>Keuly Yemele</span>
     </a>
 
     <nav class="nav">
-      <a href="/">Home</a>
       <a href="/projects/">Projects</a>
       <a href="/about/">About</a>
+      <a href="/#contact" class="btn btn--ghost">Contact</a>
+
+      <button class="icon-btn" id="themeToggle" type="button">
+        <span class="icon-btn__dot"></span>
+        <span class="icon-btn__text">Theme</span>
+      </button>
     </nav>
   </header>
 
-  <main class="container">
+  <main class="container fade-in">
 
-    <section class="section">
-      <h2>Projects</h2>
+    <section class="section projects-grid reveal">
 
-      <div class="card">
+      <div class="project-card">
         <h3>Kubernetes Platform Automation</h3>
-        <p>
-          Designed and maintained production Kubernetes clusters (EKS, RKE2)
-          with secure CI/CD pipelines, Helm deployments, and infrastructure automation.
+
+        <p class="project-desc">
+          Designed and operated production-grade Kubernetes clusters (EKS & RKE2)
+          with Terraform-driven infrastructure and GitOps CI/CD pipelines.
         </p>
+
+        <div class="tags">
+          <span>Kubernetes</span>
+          <span>Terraform</span>
+          <span>GitLab CI</span>
+          <span>Helm</span>
+          <span>ArgoCD</span>
+        </div>
+
+        <div class="metrics">
+          <span>↓ 40% deployment time</span>
+          <span>Zero downtime upgrades</span>
+        </div>
       </div>
 
-      <div class="card">
-        <h3>Velero Disaster Recovery</h3>
-        <p>
-          Implemented automated Kubernetes backups and restore testing workflows
-          using Velero, S3 storage, and scheduled validation.
+      <div class="project-card">
+        <h3>Secure DevSecOps Pipeline</h3>
+
+        <p class="project-desc">
+          Implemented full SAST/DAST integration, container image scanning,
+          and supply chain validation across CI workflows.
         </p>
+
+        <div class="tags">
+          <span>SonarQube</span>
+          <span>Harbor</span>
+          <span>DefectDojo</span>
+          <span>SBOM</span>
+        </div>
+
+        <div class="metrics">
+          <span>Improved vulnerability detection</span>
+          <span>Automated compliance reporting</span>
+        </div>
       </div>
 
-      <div class="card">
-        <h3>ActiveMQ on Kubernetes</h3>
-        <p>
-          Deployed ActiveMQ Artemis via Helm with TLS-secured ingress,
-          persistent storage, and CI-driven environment promotion.
-        </p>
-      </div>
+      <div class="project-card">
+        <h3>Velero Backup & Disaster Recovery</h3>
 
-      <div class="card">
-        <h3>Infrastructure as Code</h3>
-        <p>
-          Managed cloud environments using Terraform modules,
-          enabling reproducible and scalable infrastructure deployments.
+        <p class="project-desc">
+          Engineered scheduled backup & restore workflows for Kubernetes
+          workloads using Velero, S3 object storage, and CSI snapshots.
         </p>
+
+        <div class="tags">
+          <span>Velero</span>
+          <span>S3</span>
+          <span>Longhorn</span>
+          <span>Kubernetes</span>
+        </div>
+
+        <div class="metrics">
+          <span>Monthly automated restore validation</span>
+          <span>Disaster-ready cluster recovery</span>
+        </div>
       </div>
 
     </section>
@@ -71,5 +108,6 @@
   </main>
 
   <script src="/app.js"></script>
+
 </body>
 </html>
