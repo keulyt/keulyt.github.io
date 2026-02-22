@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8" />
 
-  <!-- Google Search Console Verification -->
   <meta name="google-site-verification" content="Vji8sT2R2wR4efaxTY2jARlmqtxM0ZFOniW8m3AeCKA" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -18,7 +17,6 @@
 
   <header class="topbar">
     <a class="brand" href="/">
-      <span class="brand-dot"></span>
       <span>Keuly Yemele</span>
     </a>
 
@@ -29,9 +27,11 @@
     </nav>
   </header>
 
-  <main class="container">
+  <main class="container fade-in">
 
-    <section class="hero">
+    <section class="hero reveal">
+      <div class="hero-overlay"></div>
+
       <p class="pill">Platform Engineer • Kubernetes • DevSecOps</p>
 
       <h1>Secure, scalable Kubernetes platforms built for production</h1>
@@ -42,8 +42,8 @@
       </p>
 
       <div class="cta">
-        <a class="btn" href="/projects/">View Projects</a>
-        <a class="btn btn--ghost" href="/assets/resume.pdf" target="_blank">
+        <a class="btn glow" href="/projects/">View Projects</a>
+        <a class="btn btn--ghost glow" href="/assets/resume.pdf" target="_blank">
           Download Resume
         </a>
       </div>
@@ -57,26 +57,14 @@
       </div>
     </section>
 
-    <section id="contact" class="section">
+    <section id="contact" class="section reveal">
       <h2>Contact</h2>
       <p class="section__sub">Send a message directly.</p>
 
       <form class="form" action="https://formspree.io/f/xdalwjqz" method="POST">
-        <input
-          type="email"
-          name="email"
-          placeholder="Your email"
-          required
-        />
-
-        <textarea
-          name="message"
-          rows="5"
-          placeholder="Your message"
-          required
-        ></textarea>
-
-        <button class="btn" type="submit">Send</button>
+        <input type="email" name="email" placeholder="Your email" required />
+        <textarea name="message" rows="5" placeholder="Your message" required></textarea>
+        <button class="btn glow" type="submit">Send</button>
       </form>
     </section>
 
