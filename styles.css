@@ -100,9 +100,9 @@ body {
 }
 
 .hero h1 {
-  font-size: 46px;
-  margin-bottom: 16px;
-  line-height: 1.2;
+  font-size: 48px;
+  margin-bottom: 10px;
+  white-space: nowrap;
 }
 
 .lead {
