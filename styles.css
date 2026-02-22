@@ -400,3 +400,26 @@ body::before {
   color: var(--muted);
   margin-bottom: 28px;
 }
+.case-study {
+  max-width: 820px;
+  margin: 140px auto;
+}
+
+.case-study h1 {
+  font-size: 34px;
+  margin-bottom: 18px;
+}
+
+.case-study h2 {
+  margin-top: 40px;
+  font-size: 22px;
+}
+
+.diagram-placeholder {
+  margin-top: 20px;
+  padding: 40px;
+  border: 1px dashed var(--border);
+  border-radius: 12px;
+  text-align: center;
+  color: var(--muted);
+}

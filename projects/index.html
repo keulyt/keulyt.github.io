@@ -12,102 +12,50 @@
 
 <body>
 
-  <div class="cursor-glow" aria-hidden="true"></div>
+<div class="cursor-glow"></div>
 
-  <header class="topbar">
-    <a class="brand" href="/">
-      <span>Keuly Yemele</span>
-    </a>
+<header class="topbar">
+  <a class="brand" href="/">
+    <span>Keuly Yemele</span>
+  </a>
 
-    <nav class="nav">
-      <a href="/projects/">Projects</a>
-      <a href="/about/">About</a>
-      <a href="/#contact" class="btn btn--ghost">Contact</a>
+  <nav class="nav">
+    <a href="/projects/">Projects</a>
+    <a href="/about/">About</a>
+    <a href="/#contact" class="btn btn--ghost">Contact</a>
+    <button class="icon-btn" id="themeToggle">
+      <span class="icon-btn__dot"></span>
+      <span class="icon-btn__text">Theme</span>
+    </button>
+  </nav>
+</header>
 
-      <button class="icon-btn" id="themeToggle" type="button">
-        <span class="icon-btn__dot"></span>
-        <span class="icon-btn__text">Theme</span>
-      </button>
-    </nav>
-  </header>
+<main class="container fade-in">
 
-  <main class="container fade-in">
+<section class="section projects-grid reveal">
 
-    <section class="section projects-grid reveal">
+<a href="/projects/kubernetes-platform.html" class="project-card clickable">
+  <h3>Kubernetes Platform Automation</h3>
+  <p class="project-desc">
+    Production-grade Kubernetes clusters (EKS & RKE2) with Terraform and GitOps.
+  </p>
+</a>
 
-      <div class="project-card">
-        <h3>Kubernetes Platform Automation</h3>
+<a href="/projects/devsecops-pipeline.html" class="project-card clickable">
+  <h3>Secure DevSecOps Pipeline</h3>
+  <p class="project-desc">
+    SAST/DAST integration, image scanning, and supply chain validation.
+  </p>
+</a>
 
-        <p class="project-desc">
-          Designed and operated production-grade Kubernetes clusters (EKS & RKE2)
-          with Terraform-driven infrastructure and GitOps CI/CD pipelines.
-        </p>
+</section>
 
-        <div class="tags">
-          <span>Kubernetes</span>
-          <span>Terraform</span>
-          <span>GitLab CI</span>
-          <span>Helm</span>
-          <span>ArgoCD</span>
-        </div>
+<footer class="footer">
+  © <span id="year"></span> Keuly T. Yemele
+</footer>
 
-        <div class="metrics">
-          <span>↓ 40% deployment time</span>
-          <span>Zero downtime upgrades</span>
-        </div>
-      </div>
+</main>
 
-      <div class="project-card">
-        <h3>Secure DevSecOps Pipeline</h3>
-
-        <p class="project-desc">
-          Implemented full SAST/DAST integration, container image scanning,
-          and supply chain validation across CI workflows.
-        </p>
-
-        <div class="tags">
-          <span>SonarQube</span>
-          <span>Harbor</span>
-          <span>DefectDojo</span>
-          <span>SBOM</span>
-        </div>
-
-        <div class="metrics">
-          <span>Improved vulnerability detection</span>
-          <span>Automated compliance reporting</span>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <h3>Velero Backup & Disaster Recovery</h3>
-
-        <p class="project-desc">
-          Engineered scheduled backup & restore workflows for Kubernetes
-          workloads using Velero, S3 object storage, and CSI snapshots.
-        </p>
-
-        <div class="tags">
-          <span>Velero</span>
-          <span>S3</span>
-          <span>Longhorn</span>
-          <span>Kubernetes</span>
-        </div>
-
-        <div class="metrics">
-          <span>Monthly automated restore validation</span>
-          <span>Disaster-ready cluster recovery</span>
-        </div>
-      </div>
-
-    </section>
-
-    <footer class="footer">
-      © <span id="year"></span> Keuly T. Yemele
-    </footer>
-
-  </main>
-
-  <script src="/app.js"></script>
-
+<script src="/app.js"></script>
 </body>
 </html>
