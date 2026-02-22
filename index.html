@@ -1,77 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
 
-<title>Keuly T. Yemele | Platform Engineer</title>
-<meta name="description" content="Keuly T. Yemele - Platform Engineer specializing in Kubernetes, DevOps, CI/CD, Terraform, and Cloud Infrastructure.">
+  <!-- Google Search Console Verification -->
+  <meta name="google-site-verification" content="Vji8sT2R2wR4efaxTY2jARlmqtxM0ZFOniW8m3AeCKA" />
 
-<link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Keuly T. Yemele | Platform Engineer</title>
+
+  <meta name="description" content="Keuly T. Yemele - Platform Engineer specializing in Kubernetes, DevOps, CI/CD, Terraform, and cloud infrastructure." />
+
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
 
-<canvas id="kube-bg"></canvas>
+  <header class="topbar">
+    <a class="brand" href="/">
+      <span class="brand-dot"></span>
+      <span>Keuly Yemele</span>
+    </a>
 
-<header class="topbar">
-  <a class="brand" href="/">
-    <span class="brand-dot"></span>
-    <span>Keuly Yemele</span>
-  </a>
+    <nav class="nav">
+      <a href="/projects/">Projects</a>
+      <a href="/about/">About</a>
+      <a href="#contact" class="btn btn--ghost">Contact</a>
+    </nav>
+  </header>
 
-  <nav class="nav">
-    <a href="/projects/">Projects</a>
-    <a href="/about/">About</a>
-    <a href="#contact" class="btn btn--ghost">Contact</a>
-  </nav>
-</header>
+  <main class="container">
 
-<main class="container">
+    <section class="hero">
+      <p class="pill">Platform Engineer • Kubernetes • DevSecOps</p>
 
-<section class="hero">
-  <div class="hero__left">
-    <p class="pill">Platform Engineer • Kubernetes • DevSecOps</p>
-    <h1>Secure, scalable Kubernetes platforms built for production.</h1>
+      <h1>Secure, scalable Kubernetes platforms built for production.</h1>
 
-    <p class="lead">
-      I design and operate Kubernetes platforms (EKS, RKE2) with CI/CD automation,
-      Terraform infrastructure, and security-first engineering practices.
-    </p>
+      <p class="lead">
+        I design and operate Kubernetes platforms (EKS, RKE2) with CI/CD automation,
+        Terraform infrastructure, and security-first engineering practices.
+      </p>
 
-    <div class="cta">
-      <a class="btn" href="/projects/">View Projects</a>
-      <a class="btn btn--ghost" href="/assets/resume.pdf" target="_blank">Download Resume</a>
-    </div>
+      <div class="cta">
+        <a class="btn" href="/projects/">View Projects</a>
+        <a class="btn btn--ghost" href="/assets/resume.pdf" target="_blank">
+          Download Resume
+        </a>
+      </div>
 
-    <div class="quicklinks">
-      <a href="https://www.linkedin.com/in/keuly-yemele/" target="_blank">LinkedIn</a>
-      <span class="dot">•</span>
-      <a href="https://github.com/keulyt" target="_blank">GitHub</a>
-      <span class="dot">•</span>
-      <a href="mailto:keuly1989@gmail.com">Email</a>
-    </div>
-  </div>
-</section>
+      <div class="quicklinks">
+        <a href="https://www.linkedin.com/in/keuly-yemele/" target="_blank">LinkedIn</a>
+        <span class="dot">•</span>
+        <a href="https://github.com/keulyt" target="_blank">GitHub</a>
+        <span class="dot">•</span>
+        <a href="mailto:keuly1989@gmail.com">Email</a>
+      </div>
+    </section>
 
-<section id="contact" class="section">
-  <h2>Contact</h2>
-  <p class="section__sub">Send a message directly.</p>
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <p class="section__sub">Send a message directly.</p>
 
-  <form class="form" action="https://formspree.io/f/xdalwjqz" method="POST">
-    <input type="email" name="email" placeholder="Your email" required>
-    <textarea name="message" rows="5" placeholder="Your message" required></textarea>
-    <button class="btn" type="submit">Send</button>
-  </form>
-</section>
+      <form class="form" action="https://formspree.io/f/xdalwjqz" method="POST">
+        <input
+          type="email"
+          name="email"
+          placeholder="Your email"
+          required
+        />
 
-<footer class="footer">
-  © <span id="year"></span> Keuly T. Yemele
-</footer>
+        <textarea
+          name="message"
+          rows="5"
+          placeholder="Your message"
+          required
+        ></textarea>
 
-</main>
+        <button class="btn" type="submit">Send</button>
+      </form>
+    </section>
 
-<script src="app.js"></script>
+    <footer class="footer">
+      © <span id="year"></span> Keuly T. Yemele
+    </footer>
+
+  </main>
+
+  <script src="app.js"></script>
 
 </body>
 </html>
