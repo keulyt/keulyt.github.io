@@ -386,3 +386,17 @@ body::before {
 
   .snap { scroll-snap-type: none; }
 }
+/* About page refinement */
+
+.about-clean {
+  max-width: 760px;
+  margin: 140px auto 100px auto;
+  text-align: left;
+}
+
+.about-text {
+  font-size: 18px;
+  line-height: 1.8;
+  color: var(--muted);
+  margin-bottom: 28px;
+}
