@@ -3,17 +3,23 @@
 <head>
   <meta charset="UTF-8" />
 
+  <!-- Google Search Console Verification -->
   <meta name="google-site-verification" content="Vji8sT2R2wR4efaxTY2jARlmqtxM0ZFOniW8m3AeCKA" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Keuly T. Yemele | Platform Engineer</title>
 
-  <meta name="description" content="Keuly T. Yemele - Platform Engineer specializing in Kubernetes, DevOps, CI/CD, Terraform, and cloud infrastructure." />
+  <meta
+    name="description"
+    content="Keuly T. Yemele - Platform Engineer specializing in Kubernetes, DevOps, CI/CD, Terraform, and cloud infrastructure."
+  />
 
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
+  <!-- Cursor glow -->
+  <div class="cursor-glow" aria-hidden="true"></div>
 
   <header class="topbar">
     <a class="brand" href="/">
@@ -24,12 +30,17 @@
       <a href="/projects/">Projects</a>
       <a href="/about/">About</a>
       <a href="#contact" class="btn btn--ghost">Contact</a>
+
+      <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle dark mode" title="Toggle theme">
+        <span class="icon-btn__dot" aria-hidden="true"></span>
+        <span class="icon-btn__text">Theme</span>
+      </button>
     </nav>
   </header>
 
-  <main class="container fade-in">
+  <main class="container fade-in snap">
 
-    <section class="hero reveal">
+    <section class="hero snap-section reveal" id="home">
       <div class="hero-overlay"></div>
 
       <p class="pill">Platform Engineer • Kubernetes • DevSecOps</p>
@@ -43,21 +54,21 @@
 
       <div class="cta">
         <a class="btn glow" href="/projects/">View Projects</a>
-        <a class="btn btn--ghost glow" href="/assets/resume.pdf" target="_blank">
+        <a class="btn btn--ghost glow" href="/assets/resume.pdf" target="_blank" rel="noopener">
           Download Resume
         </a>
       </div>
 
       <div class="quicklinks">
-        <a href="https://www.linkedin.com/in/keuly-yemele/" target="_blank">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/keuly-yemele/" target="_blank" rel="noopener">LinkedIn</a>
         <span class="dot">•</span>
-        <a href="https://github.com/keulyt" target="_blank">GitHub</a>
+        <a href="https://github.com/keulyt" target="_blank" rel="noopener">GitHub</a>
         <span class="dot">•</span>
         <a href="mailto:keuly1989@gmail.com">Email</a>
       </div>
     </section>
 
-    <section id="contact" class="section reveal">
+    <section id="contact" class="section snap-section reveal">
       <h2>Contact</h2>
       <p class="section__sub">Send a message directly.</p>
 
@@ -66,15 +77,14 @@
         <textarea name="message" rows="5" placeholder="Your message" required></textarea>
         <button class="btn glow" type="submit">Send</button>
       </form>
-    </section>
 
-    <footer class="footer">
-      © <span id="year"></span> Keuly T. Yemele
-    </footer>
+      <footer class="footer">
+        © <span id="year"></span> Keuly T. Yemele
+      </footer>
+    </section>
 
   </main>
 
   <script src="app.js"></script>
-
 </body>
 </html>
