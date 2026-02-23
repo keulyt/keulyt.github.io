@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Projects | Keuly T. Yemele</title>
-  <meta name="description" content="Selected engineering work and public case studies by Keuly T. Yemele." />
+  <meta name="description" content="Public engineering projects and case studies by Keuly T. Yemele." />
 
   <link rel="stylesheet" href="/styles.css" />
 </head>
@@ -26,13 +26,13 @@
 
   <main class="container">
 
-    <!-- PROJECTS GRID -->
+    <!-- REAL PROJECT -->
 
     <section class="section">
       <h1 class="page-title">Projects</h1>
 
       <p class="lead">
-        A selection of public engineering work and production-style case studies.
+        Selected public engineering work and production-focused case studies.
       </p>
 
       <div class="grid">
@@ -40,26 +40,27 @@
         <article class="card">
           <div class="card__top">
             <h2 class="card__title">
-              <a href="/projects/k8s-health-probe-demo.html">
-                Kubernetes Health Probe Demo
+              <a href="https://github.com/keulyt/ansiblerole" target="_blank">
+                Ansible Role Automation
               </a>
             </h2>
-            <p class="card__meta">Public project</p>
+            <p class="card__meta">Public GitHub Project</p>
           </div>
 
           <p class="card__desc">
-            A minimal production-style deployment demonstrating correct liveness and readiness probe configuration.
+            Modular Ansible role structure used to configure infrastructure components,
+            automate patching, and manage Jenkins-related provisioning.
           </p>
 
           <ul class="tags">
-            <li>Kubernetes</li>
-            <li>Reliability</li>
-            <li>Operations</li>
+            <li>Ansible</li>
+            <li>Automation</li>
+            <li>Configuration Management</li>
           </ul>
 
           <div class="card__actions">
-            <a class="btn btn--ghost" href="/projects/k8s-health-probe-demo.html">
-              View Case Study
+            <a class="btn btn--ghost" href="https://github.com/keulyt/ansiblerole" target="_blank">
+              View on GitHub
             </a>
           </div>
         </article>
@@ -68,38 +69,38 @@
     </section>
 
 
-    <!-- CASE STUDIES SECTION -->
+    <!-- CASE STUDY SECTION -->
 
     <section class="section">
-      <h2 class="page-title">Case Studies</h2>
+      <h2 class="page-title">Case Study</h2>
 
       <div class="case-block">
-        <h3>Production Platform Stabilization</h3>
+        <h3>Ansible-Based Infrastructure Automation</h3>
 
         <h4>Problem</h4>
         <ul>
-          <li>Inconsistent deployments across environments</li>
-          <li>Limited monitoring visibility</li>
-          <li>Manual release risk during production pushes</li>
+          <li>Manual server configuration processes were inconsistent</li>
+          <li>Patch management required repetitive operational effort</li>
+          <li>Environment drift increased operational risk</li>
         </ul>
 
         <h4>Approach</h4>
         <ul>
-          <li>Standardized deployment patterns and promotion flows</li>
-          <li>Established health monitoring and alert baselines</li>
-          <li>Reduced configuration drift through controlled workflows</li>
+          <li>Designed modular Ansible role structure for reusable automation</li>
+          <li>Implemented structured playbooks for infrastructure configuration</li>
+          <li>Enabled automated patching workflows</li>
+          <li>Organized environment configuration via ansible.cfg and inventory files</li>
         </ul>
 
         <h4>Outcome</h4>
         <ul>
-          <li>Improved deployment reliability</li>
-          <li>Reduced incident frequency</li>
-          <li>Faster troubleshooting through clearer observability</li>
+          <li>Improved configuration consistency across systems</li>
+          <li>Reduced manual operational workload</li>
+          <li>Established repeatable automation foundation</li>
         </ul>
       </div>
 
     </section>
-
 
     <footer class="footer">
       © <span id="year"></span> Keuly T. Yemele
