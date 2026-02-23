@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Ansible Infrastructure Automation | Keuly T. Yemele</title>
+  <meta name="description" content="Ansible-based infrastructure automation project focused on modular role design, patching workflows, and Jenkins provisioning." />
+
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+
+<body>
+
+  <header class="topbar">
+    <a class="brand" href="/">
+      <span>Keuly Yemele</span>
+    </a>
+
+    <nav class="nav">
+      <a href="/projects/">Projects</a>
+      <a href="/about/">About</a>
+      <a href="/#contact" class="btn btn--ghost">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container">
+
+    <section class="section">
+      <h1 class="page-title">Ansible Infrastructure Automation</h1>
+
+      <p class="lead">
+        Modular automation framework using Ansible roles to standardize server configuration,
+        automate patching, and provision Jenkins environments.
+      </p>
+
+      <div class="badges">
+        <img src="https://img.shields.io/github/stars/keulyt/ansiblerole?style=flat-square" />
+        <img src="https://img.shields.io/github/languages/top/keulyt/ansiblerole?style=flat-square" />
+      </div>
+
+      <div class="project-actions">
+        <a class="btn" href="https://github.com/keulyt/ansiblerole" target="_blank">
+          View Repository
+        </a>
+      </div>
+    </section>
+
+
+    <!-- Architecture Section -->
+
+    <section class="section">
+      <h2>Architecture Overview</h2>
+
+      <div class="diagram-box">
+<pre>
+Developer
+   |
+   v
+Ansible Control Node
+   |
+   |--- roles/
+   |--- playbook.yaml
+   |--- aws_ec2.yaml
+   |
+   v
+Target Servers
+   |
+   |--- Jenkins Setup
+   |--- System Patching
+   |--- Configuration Enforcement
+</pre>
+      </div>
+    </section>
+
+
+    <!-- Before vs After -->
+
+    <section class="section">
+      <h2>Before vs After</h2>
+
+      <div class="comparison">
+
+        <div class="comparison-block">
+          <h3>Before</h3>
+          <ul>
+            <li>Manual server configuration</li>
+            <li>Inconsistent patch cycles</li>
+            <li>Environment drift over time</li>
+            <li>Repeated operational effort</li>
+          </ul>
+        </div>
+
+        <div class="comparison-block">
+          <h3>After</h3>
+          <ul>
+            <li>Modular Ansible roles</li>
+            <li>Repeatable patch automation</li>
+            <li>Consistent environment state</li>
+            <li>Reduced manual intervention</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- Case Study -->
+
+    <section class="section">
+      <h2>Case Study</h2>
+
+      <div class="case-block">
+        <h3>Problem</h3>
+        <p>
+          Infrastructure provisioning and patching required manual steps, increasing
+          configuration drift and operational overhead.
+        </p>
+
+        <h3>Approach</h3>
+        <ul>
+          <li>Designed modular Ansible role structure</li>
+          <li>Organized playbooks for repeatable automation</li>
+          <li>Integrated AWS EC2 inventory configuration</li>
+          <li>Structured patching workflows</li>
+        </ul>
+
+        <h3>Outcome</h3>
+        <ul>
+          <li>Improved configuration consistency</li>
+          <li>Reduced time to provision systems</li>
+          <li>Established reusable automation baseline</li>
+        </ul>
+      </div>
+    </section>
+
+    <footer class="footer">
+      © <span id="year"></span> Keuly T. Yemele
+    </footer>
+
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>

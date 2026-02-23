@@ -447,3 +447,89 @@ body::before {
 .project-actions {
   margin-top: 40px;
 }
+.badges img {
+  margin-right: 10px;
+  margin-top: 15px;
+}
+
+.diagram-box {
+  background: var(--card);
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  margin-top: 20px;
+  font-family: monospace;
+}
+
+.comparison {
+  display: flex;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.comparison-block {
+  flex: 1;
+  background: var(--card);
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+/* ===============================
+   Profile Section
+================================= */
+
+.profile-section {
+  padding-top: 40px;
+}
+
+.profile-grid {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.profile-photo img {
+  width: 240px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 999px;
+  border: 3px solid rgba(0, 191, 255, 0.35);
+  box-shadow: 0 20px 60px rgba(0, 191, 255, 0.15);
+}
+
+.profile-content h2 {
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.profile-title {
+  font-weight: 600;
+  margin-bottom: 18px;
+  color: var(--fg);
+}
+
+.profile-text {
+  color: var(--muted);
+  line-height: 1.75;
+  margin-bottom: 18px;
+}
+
+.profile-text.subtle {
+  font-size: 14px;
+  color: var(--muted2);
+}
+
+/* Responsive */
+@media (max-width: 860px) {
+  .profile-grid {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-photo img {
+    width: 180px;
+    height: 180px;
+  }
+}
