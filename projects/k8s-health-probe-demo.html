@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Kubernetes Health Probe Demo | Keuly T. Yemele</title>
+  <meta name="description" content="A minimal Kubernetes deployment demonstrating proper liveness and readiness probe configuration." />
+
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+
+<body>
+
+  <header class="topbar">
+    <a class="brand" href="/">
+      <span>Keuly Yemele</span>
+    </a>
+
+    <nav class="nav">
+      <a href="/projects/">Projects</a>
+      <a href="/about/">About</a>
+      <a href="/#contact" class="btn btn--ghost">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container">
+
+    <section class="section">
+
+      <h1 class="page-title">Kubernetes Health Probe Demo</h1>
+
+      <p class="lead">
+        A minimal production-style deployment demonstrating correct liveness and readiness probe configuration.
+      </p>
+
+      <div class="case-block">
+        <h2>Problem</h2>
+        <p>
+          Many Kubernetes deployments run without properly configured liveness and readiness probes,
+          leading to unhealthy pods serving traffic or delayed failure detection.
+        </p>
+      </div>
+
+      <div class="case-block">
+        <h2>Approach</h2>
+        <ul>
+          <li>Created a minimal deployment manifest with HTTP health endpoints</li>
+          <li>Configured readiness probes to protect service traffic</li>
+          <li>Configured liveness probes to ensure automatic recovery</li>
+          <li>Validated restart behavior through controlled failure testing</li>
+        </ul>
+      </div>
+
+      <div class="case-block">
+        <h2>Outcome</h2>
+        <ul>
+          <li>Improved workload resilience</li>
+          <li>Reduced manual intervention during pod failures</li>
+          <li>Clear operational visibility into application health</li>
+        </ul>
+      </div>
+
+      <div class="project-actions">
+        <a class="btn" href="https://github.com/keulyt" target="_blank">
+          View GitHub
+        </a>
+      </div>
+
+    </section>
+
+    <footer class="footer">
+      © <span id="year"></span> Keuly T. Yemele
+    </footer>
+
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>

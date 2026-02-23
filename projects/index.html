@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Projects | Keuly T. Yemele</title>
-  <meta name="description" content="Selected engineering work and public-ready case studies by Keuly T. Yemele." />
+  <meta name="description" content="Selected engineering work and public case studies by Keuly T. Yemele." />
 
   <link rel="stylesheet" href="/styles.css" />
 </head>
@@ -21,92 +21,85 @@
       <a href="/projects/">Projects</a>
       <a href="/about/">About</a>
       <a href="/#contact" class="btn btn--ghost">Contact</a>
-      <button class="btn btn--ghost theme-toggle" id="themeToggle" type="button">
-        <span class="theme-dot" aria-hidden="true"></span>
-        Theme
-      </button>
     </nav>
   </header>
 
   <main class="container">
 
+    <!-- PROJECTS GRID -->
+
     <section class="section">
       <h1 class="page-title">Projects</h1>
+
       <p class="lead">
-        These are public-ready case studies that describe the kind of work I deliver. Full technical writeups and code links
-        will be added as each project is published.
+        A selection of public engineering work and production-style case studies.
       </p>
 
       <div class="grid">
 
         <article class="card">
           <div class="card__top">
-            <h2 class="card__title">Secure CI/CD Hardening</h2>
-            <p class="card__meta">Case study • Public-ready</p>
+            <h2 class="card__title">
+              <a href="/projects/k8s-health-probe-demo.html">
+                Kubernetes Health Probe Demo
+              </a>
+            </h2>
+            <p class="card__meta">Public project</p>
           </div>
 
           <p class="card__desc">
-            A practical approach to hardening pipelines with safer defaults: branch protections, review gates,
-            artifact integrity checks, and controlled promotion to environments.
+            A minimal production-style deployment demonstrating correct liveness and readiness probe configuration.
           </p>
 
           <ul class="tags">
-            <li>CI/CD</li>
-            <li>Pipeline security</li>
-            <li>Release controls</li>
+            <li>Kubernetes</li>
+            <li>Reliability</li>
+            <li>Operations</li>
           </ul>
 
           <div class="card__actions">
-            <span class="btn btn--ghost btn--disabled" aria-disabled="true">Writeup coming soon</span>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card__top">
-            <h2 class="card__title">Observability Baseline</h2>
-            <p class="card__meta">Case study • Public-ready</p>
-          </div>
-
-          <p class="card__desc">
-            A monitoring baseline for platforms: clean dashboards, alerts that reduce noise, and incident-friendly logs
-            and metrics to speed up root-cause analysis.
-          </p>
-
-          <ul class="tags">
-            <li>Monitoring</li>
-            <li>Alerting</li>
-            <li>Incident response</li>
-          </ul>
-
-          <div class="card__actions">
-            <span class="btn btn--ghost btn--disabled" aria-disabled="true">Writeup coming soon</span>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card__top">
-            <h2 class="card__title">Container Supply Chain Controls</h2>
-            <p class="card__meta">Case study • Public-ready</p>
-          </div>
-
-          <p class="card__desc">
-            A clean, real-world approach to container image hygiene: scanning, policy checks, and repeatable release practices
-            that keep teams moving without sacrificing security.
-          </p>
-
-          <ul class="tags">
-            <li>Containers</li>
-            <li>Scanning</li>
-            <li>Policy</li>
-          </ul>
-
-          <div class="card__actions">
-            <span class="btn btn--ghost btn--disabled" aria-disabled="true">Writeup coming soon</span>
+            <a class="btn btn--ghost" href="/projects/k8s-health-probe-demo.html">
+              View Case Study
+            </a>
           </div>
         </article>
 
       </div>
     </section>
+
+
+    <!-- CASE STUDIES SECTION -->
+
+    <section class="section">
+      <h2 class="page-title">Case Studies</h2>
+
+      <div class="case-block">
+        <h3>Production Platform Stabilization</h3>
+
+        <h4>Problem</h4>
+        <ul>
+          <li>Inconsistent deployments across environments</li>
+          <li>Limited monitoring visibility</li>
+          <li>Manual release risk during production pushes</li>
+        </ul>
+
+        <h4>Approach</h4>
+        <ul>
+          <li>Standardized deployment patterns and promotion flows</li>
+          <li>Established health monitoring and alert baselines</li>
+          <li>Reduced configuration drift through controlled workflows</li>
+        </ul>
+
+        <h4>Outcome</h4>
+        <ul>
+          <li>Improved deployment reliability</li>
+          <li>Reduced incident frequency</li>
+          <li>Faster troubleshooting through clearer observability</li>
+        </ul>
+      </div>
+
+    </section>
+
 
     <footer class="footer">
       © <span id="year"></span> Keuly T. Yemele
