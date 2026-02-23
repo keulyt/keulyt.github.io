@@ -5,57 +5,115 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Projects | Keuly T. Yemele</title>
-  <meta name="description" content="Selected Kubernetes and DevOps engineering projects by Keuly T. Yemele." />
+  <meta name="description" content="Selected engineering work and public-ready case studies by Keuly T. Yemele." />
 
   <link rel="stylesheet" href="/styles.css" />
 </head>
 
 <body>
 
-<div class="cursor-glow"></div>
+  <header class="topbar">
+    <a class="brand" href="/">
+      <span>Keuly Yemele</span>
+    </a>
 
-<header class="topbar">
-  <a class="brand" href="/">
-    <span>Keuly Yemele</span>
-  </a>
+    <nav class="nav">
+      <a href="/projects/">Projects</a>
+      <a href="/about/">About</a>
+      <a href="/#contact" class="btn btn--ghost">Contact</a>
+      <button class="btn btn--ghost theme-toggle" id="themeToggle" type="button">
+        <span class="theme-dot" aria-hidden="true"></span>
+        Theme
+      </button>
+    </nav>
+  </header>
 
-  <nav class="nav">
-    <a href="/projects/">Projects</a>
-    <a href="/about/">About</a>
-    <a href="/#contact" class="btn btn--ghost">Contact</a>
-    <button class="icon-btn" id="themeToggle">
-      <span class="icon-btn__dot"></span>
-      <span class="icon-btn__text">Theme</span>
-    </button>
-  </nav>
-</header>
+  <main class="container">
 
-<main class="container fade-in">
+    <section class="section">
+      <h1 class="page-title">Projects</h1>
+      <p class="lead">
+        These are public-ready case studies that describe the kind of work I deliver. Full technical writeups and code links
+        will be added as each project is published.
+      </p>
 
-<section class="section projects-grid reveal">
+      <div class="grid">
 
-<a href="/projects/kubernetes-platform.html" class="project-card clickable">
-  <h3>Kubernetes Platform Automation</h3>
-  <p class="project-desc">
-    Production-grade Kubernetes clusters (EKS & RKE2) with Terraform and GitOps.
-  </p>
-</a>
+        <article class="card">
+          <div class="card__top">
+            <h2 class="card__title">Secure CI/CD Hardening</h2>
+            <p class="card__meta">Case study • Public-ready</p>
+          </div>
 
-<a href="/projects/devsecops-pipeline.html" class="project-card clickable">
-  <h3>Secure DevSecOps Pipeline</h3>
-  <p class="project-desc">
-    SAST/DAST integration, image scanning, and supply chain validation.
-  </p>
-</a>
+          <p class="card__desc">
+            A practical approach to hardening pipelines with safer defaults: branch protections, review gates,
+            artifact integrity checks, and controlled promotion to environments.
+          </p>
 
-</section>
+          <ul class="tags">
+            <li>CI/CD</li>
+            <li>Pipeline security</li>
+            <li>Release controls</li>
+          </ul>
 
-<footer class="footer">
-  © <span id="year"></span> Keuly T. Yemele
-</footer>
+          <div class="card__actions">
+            <span class="btn btn--ghost btn--disabled" aria-disabled="true">Writeup coming soon</span>
+          </div>
+        </article>
 
-</main>
+        <article class="card">
+          <div class="card__top">
+            <h2 class="card__title">Observability Baseline</h2>
+            <p class="card__meta">Case study • Public-ready</p>
+          </div>
 
-<script src="/app.js"></script>
+          <p class="card__desc">
+            A monitoring baseline for platforms: clean dashboards, alerts that reduce noise, and incident-friendly logs
+            and metrics to speed up root-cause analysis.
+          </p>
+
+          <ul class="tags">
+            <li>Monitoring</li>
+            <li>Alerting</li>
+            <li>Incident response</li>
+          </ul>
+
+          <div class="card__actions">
+            <span class="btn btn--ghost btn--disabled" aria-disabled="true">Writeup coming soon</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__top">
+            <h2 class="card__title">Container Supply Chain Controls</h2>
+            <p class="card__meta">Case study • Public-ready</p>
+          </div>
+
+          <p class="card__desc">
+            A clean, real-world approach to container image hygiene: scanning, policy checks, and repeatable release practices
+            that keep teams moving without sacrificing security.
+          </p>
+
+          <ul class="tags">
+            <li>Containers</li>
+            <li>Scanning</li>
+            <li>Policy</li>
+          </ul>
+
+          <div class="card__actions">
+            <span class="btn btn--ghost btn--disabled" aria-disabled="true">Writeup coming soon</span>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <footer class="footer">
+      © <span id="year"></span> Keuly T. Yemele
+    </footer>
+
+  </main>
+
+  <script src="/app.js"></script>
 </body>
 </html>
