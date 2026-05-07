@@ -1,0 +1,68 @@
+{
+  "items": [
+    {
+      "title": "Kubernetes Platform Architecture",
+      "description": "Production-grade Kubernetes platforms with multi-cluster management and GitOps-driven deployments.",
+      "features": [
+        "Multi-cluster architecture with service mesh",
+        "GitOps-based deployments with ArgoCD",
+        "Automated canary analysis and rollbacks",
+        "RBAC and network policy enforcement"
+      ],
+      "image": "https://images.pexels.com/photos/27826479/pexels-photo-27826479.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=400&w=600",
+      "imageHover": "https://images.pexels.com/photos/33512155/pexels-photo-33512155.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=400&w=600",
+      "tech": ["Kubernetes", "AWS", "Helm", "ArgoCD"],
+      "links": [
+        { "label": "GitHub", "url": "https://github.com/keulyt" }
+      ]
+    },
+    {
+      "title": "DevSecOps CI/CD Pipeline",
+      "description": "End-to-end CI/CD pipelines with integrated security scanning and zero-downtime deployments.",
+      "features": [
+        "Integrated SAST/DAST security scanning",
+        "Automated compliance and policy checks",
+        "Progressive delivery with canary analysis",
+        "Multi-environment deployment orchestration"
+      ],
+      "image": "https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=400&w=600",
+      "imageHover": "https://images.pexels.com/photos/17485657/pexels-photo-17485657.png?auto=compress&cs=tinysrgb&fit=crop&h=400&w=600",
+      "tech": ["Jenkins", "GitLab", "DevSecOps", "Docker"],
+      "links": [
+        { "label": "GitHub", "url": "https://github.com/keulyt" }
+      ]
+    },
+    {
+      "title": "Infrastructure as Code Framework",
+      "description": "Reusable Terraform modules and Ansible playbooks for standardized cloud provisioning.",
+      "features": [
+        "Modular Terraform with Terragrunt patterns",
+        "Ansible roles for configuration management",
+        "Policy-as-code with OPA integration",
+        "Automated drift detection and remediation"
+      ],
+      "image": "https://images.pexels.com/photos/30547616/pexels-photo-30547616.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=400&w=600",
+      "imageHover": "https://images.pexels.com/photos/30547568/pexels-photo-30547568.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=400&w=600",
+      "tech": ["Terraform", "Ansible", "AWS", "CloudFormation"],
+      "links": [
+        { "label": "GitHub", "url": "https://github.com/keulyt" }
+      ]
+    },
+    {
+      "title": "Monitoring & Observability Platform",
+      "description": "Comprehensive monitoring stack for real-time visibility into platform health and security.",
+      "features": [
+        "Centralized metrics with Prometheus",
+        "Distributed tracing with OpenTelemetry",
+        "Log aggregation with Splunk and Loki",
+        "Custom dashboards and alerting rules"
+      ],
+      "image": "https://images.pexels.com/photos/4864249/pexels-photo-4864249.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=400&w=600",
+      "imageHover": "https://images.pexels.com/photos/30547584/pexels-photo-30547584.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=400&w=600",
+      "tech": ["Prometheus", "Datadog", "Splunk", "Coroot"],
+      "links": [
+        { "label": "GitHub", "url": "https://github.com/keulyt" }
+      ]
+    }
+  ]
+}
