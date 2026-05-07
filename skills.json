@@ -1,0 +1,55 @@
+{
+  "categories": [
+    {
+      "icon": "servers",
+      "title": "Orchestration & Containers",
+      "skills": [
+        { "name": "Kubernetes (Helm, Rancher, ECS)", "level": 95 },
+        { "name": "Docker", "level": 92 },
+        { "name": "Container Security", "level": 88 }
+      ]
+    },
+    {
+      "icon": "lightning",
+      "title": "CI/CD & Build Tools",
+      "skills": [
+        { "name": "Jenkins", "level": 92 },
+        { "name": "GitLab CI", "level": 88 },
+        { "name": "AWS CodeBuild", "level": 80 }
+      ]
+    },
+    {
+      "icon": "cloud",
+      "title": "Cloud & Infrastructure",
+      "skills": [
+        { "name": "AWS (EC2, S3, IAM, CloudFront, CloudFormation)", "level": 92 },
+        { "name": "Terraform", "level": 90 },
+        { "name": "Ansible", "level": 88 }
+      ]
+    },
+    {
+      "icon": "database",
+      "title": "Databases & Monitoring",
+      "skills": [
+        { "name": "PostgreSQL, MySQL, MongoDB, Redis", "level": 85 },
+        { "name": "Prometheus, Datadog, Splunk, Coroot", "level": 88 }
+      ]
+    },
+    {
+      "icon": "code",
+      "title": "Languages & Systems",
+      "skills": [
+        { "name": "Go, Python, YAML, HTML", "level": 85 },
+        { "name": "Linux (CentOS, Ubuntu), Windows, macOS", "level": 92 }
+      ]
+    },
+    {
+      "icon": "network",
+      "title": "Networking & Security",
+      "skills": [
+        { "name": "TCP/IP, DNS, VPN", "level": 88 },
+        { "name": "DevSecOps & Compliance", "level": 90 }
+      ]
+    }
+  ]
+}
