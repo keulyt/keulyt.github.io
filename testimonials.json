@@ -1,0 +1,36 @@
+{
+  "slides": [
+    [
+      {
+        "stars": 5,
+        "quote": "Keuly transformed our entire infrastructure. His Kubernetes expertise and automation-first approach reduced our deployment time from days to minutes. A true platform engineering professional.",
+        "initials": "JM",
+        "name": "James M.",
+        "role": "Engineering Manager"
+      },
+      {
+        "stars": 5,
+        "quote": "Working with Keuly on our observability stack was outstanding. He built dashboards that gave us real-time visibility into our systems. Mean time to detection dropped dramatically.",
+        "initials": "SA",
+        "name": "Sarah A.",
+        "role": "VP of Engineering"
+      }
+    ],
+    [
+      {
+        "stars": 5,
+        "quote": "Keuly's Terraform modules became the foundation for our entire cloud infrastructure. His attention to security and compliance while maintaining developer velocity was remarkable.",
+        "initials": "DL",
+        "name": "David L.",
+        "role": "CTO"
+      },
+      {
+        "stars": 5,
+        "quote": "Keuly doesn't just build infrastructure, he builds platforms that engineers love. His GitOps implementation with ArgoCD changed how our entire team ships code. Highly recommended.",
+        "initials": "RP",
+        "name": "Rachel P.",
+        "role": "Staff Engineer"
+      }
+    ]
+  ]
+}
