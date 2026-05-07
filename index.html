@@ -2,143 +2,314 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-
-  <!-- Google Search Console Verification -->
   <meta name="google-site-verification" content="Vji8sT2R2wR4efaxTY2jARlmqtxM0ZFOniW8m3AeCKA" />
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Keuly T. Yemele | Platform Engineer</title>
-
-  <meta
-    name="description"
-    content="Keuly T. Yemele - Platform Engineer specializing in Kubernetes, DevOps, CI/CD, Terraform, and cloud infrastructure."
-  />
-
+  <meta name="description" content="Keuly T. Yemele - Platform Engineer specializing in Kubernetes, DevSecOps, Terraform, and cloud infrastructure." />
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-  <!-- Cursor glow -->
+  <!-- Cursor glow: follows mouse position -->
   <div class="cursor-glow" aria-hidden="true"></div>
 
+  <!-- HEADER -->
   <header class="topbar">
-    <a class="brand" href="/">
-      <span>Keuly Yemele</span>
-    </a>
-
-    <nav class="nav">
-      <a href="/projects/">Projects</a>
-      <a href="/about/">About</a>
-      <a href="#contact" class="btn btn--ghost">Contact</a>
-
-      <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle dark mode" title="Toggle theme">
-        <span class="icon-btn__dot" aria-hidden="true"></span>
-        <span class="icon-btn__text">Theme</span>
-      </button>
+    <a class="brand" href="#home">Portfolio</a>
+    <nav class="nav" id="mainNav">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
     </nav>
+    <button class="theme-btn" id="themeToggle" aria-label="Toggle theme" title="Toggle theme"></button>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </button>
   </header>
 
-  <main class="container fade-in snap">
+  <main>
 
-    <!-- ===============================
-         HERO SECTION (Updated)
-    ================================= -->
-
-    <section class="hero snap-section reveal" id="home">
-      <div class="hero-overlay"></div>
-
-      <p class="pill">Platform Engineer | Kubernetes | Automation</p>
-
-      <h1>Production-grade Kubernetes platforms engineered with precision</h1>
-
-      <p class="lead">
-        I design and operate secure, scalable Kubernetes environments with automation-first
-        principles, infrastructure as code, and disciplined platform engineering.
-      </p>
-
-      <div class="cta">
-        <a class="btn glow" href="/projects/">View Projects</a>
-        <a class="btn btn--resume glow" href="/assets/resume.pdf" target="_blank" rel="noopener">
-          View Resume
-        </a>
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+      <div class="hero-inner">
+        <div class="hero-text reveal">
+          <p class="hero-role">Platform Engineer  •  Kubernetes  •  DevSecOps</p>
+          <h1 class="hero-greeting">
+            Hi, I'm <span class="highlight">Keuly Yemele</span>
+          </h1>
+          <p class="hero-desc">
+            Platform Engineer specializing in secure Kubernetes environments and DevSecOps infrastructure, with experience supporting both cloud and air-gapped platforms in high-security environments.
+          </p>
+         
+          <div class="hero-socials">
+            <a href="https://www.linkedin.com/in/keuly-yemele/" target="_blank" rel="noopener" title="LinkedIn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="https://github.com/keulyt" target="_blank" rel="noopener" title="GitHub">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+            </a>
+            <a href="mailto:keuly1989@gmail.com" title="Email">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="hero-photo-wrap reveal">
+          <div class="photo-glow"></div>
+          <div class="hero-photo">
+            <img src="assets/keuly.png" alt="Keuly Yemele" />
+          </div>
+        </div>
       </div>
-
-      <div class="quicklinks">
-        <a href="https://www.linkedin.com/in/keuly-yemele/" target="_blank" rel="noopener">LinkedIn</a>
-        <span class="dot">•</span>
-        <a href="https://github.com/keulyt" target="_blank" rel="noopener">GitHub</a>
-        <span class="dot">•</span>
-        <a href="mailto:keuly1989@gmail.com">Email</a>
+      <div class="scroll-hint">
+        <span>Scroll Down</span>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
       </div>
     </section>
 
-
-    <!-- ===============================
-         PROFILE / HEADSHOT SECTION
-    ================================= -->
-
-    <section class="section profile-section reveal">
-
-      <div class="profile-grid">
-
-        <div class="profile-photo">
-          <!-- Add your photo in assets/profile.jpg -->
-          <img src="assets/profile.jpg" alt="Keuly Yemele headshot" />
-        </div>
-
-        <div class="profile-content">
-          <h2 class="profile-name">Keuly Yemele</h2>
-
-        <p class="profile-micro">
-        Platform Engineer | DevOps| Kubernetes | Automation
-        </p>
-
-          <p class="profile-title">
-            Platform Engineer focused on Kubernetes, cloud infrastructure, and automation.
-          </p>
-
-          <p class="profile-text">
-            I specialize in building production-ready platforms that prioritize security,
-            scalability, and operational reliability. My work spans Kubernetes architecture,
-            CI/CD automation, and infrastructure engineering across cloud environments.
-          </p>
-
-          <p class="profile-text subtle">
-            Currently open to full-remote platform engineering roles aligned with Kubernetes
-            and automation-driven infrastructure.
-          </p>
-	  <a class="profile-resume-link" href="/assets/resume.pdf" target="_blank" rel="noopener">
-            View Full Resume →
-          </a>
-
-        </div>
-
+    <!-- ABOUT SECTION -->
+    <section class="section" id="about">
+      <div class="section-header reveal">
+        <h2 class="section-title">About <span class="highlight">Me</span></h2>
+        <p class="section-sub">Get to know more about my journey, experience, and passion for platform engineering.</p>
       </div>
+      <div class="about-grid">
+        <div class="about-image-wrap reveal">
+          <svg class="about-illustration" width="100%" height="100%" viewBox="0 0 900 600" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <linearGradient id="podFill" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a2338"/>
+      <stop offset="100%" stop-color="#0f1626"/>
+    </linearGradient>
+    
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
 
+    <style>
+      .pod { transition: all 0.4s ease; }
+      .pod:hover { transform: scale(1.06) translateY(-8px); filter: brightness(1.35); }
+      
+      .dash { stroke-dasharray: 8 6; animation: dash 1.8s linear infinite; }
+      @keyframes dash { to { stroke-dashoffset: -28; } }
+      
+      .pulse { animation: pulse 3s ease-in-out infinite; }
+      @keyframes pulse { 0%, 100% { opacity: 0.4; } 50% { opacity: 0.9; } }
+      
+      .float { animation: float 6s ease-in-out infinite; }
+      @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-18px); } }
+
+      /* Mobile adjustments */
+      @media (max-width: 768px) {
+        text { font-size: 11px !important; }
+        .pod rect { rx: 10; }
+      }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="600" fill="#0a0f1c" opacity="0.6"/>
+
+  <!-- Left Pod - Linux -->
+  <g class="pod">
+    <rect x="70" y="185" width="155" height="105" rx="12" fill="url(#podFill)" stroke="#00bfff" stroke-width="4" stroke-opacity="0.7"/>
+    <text x="147" y="208" text-anchor="middle" fill="#00bfff" font-size="12" font-weight="600">LINUX</text>
+    <text x="147" y="223" text-anchor="middle" fill="#00bfff" font-size="10.5">ADMIN</text>
+    <rect x="92" y="237" width="105" height="13" rx="3" fill="#00ffff" opacity="0.75"/>
+  </g>
+
+  <!-- Top Pod - DevOps -->
+  <g class="pod">
+    <rect x="370" y="65" width="160" height="105" rx="12" fill="url(#podFill)" stroke="#00ffcc" stroke-width="4" stroke-opacity="0.8"/>
+    <text x="450" y="88" text-anchor="middle" fill="#00ffcc" font-size="12.5" font-weight="600">DEVOPS</text>
+    <rect x="395" y="105" width="110" height="13" rx="3" fill="#00ffcc" opacity="0.75"/>
+  </g>
+
+  <!-- Right Pod - Platform Engineer -->
+  <g class="pod">
+    <rect x="675" y="185" width="155" height="105" rx="12" fill="url(#podFill)" stroke="#00ffff" stroke-width="4.5" stroke-opacity="0.9"/>
+    <text x="752" y="208" text-anchor="middle" fill="#00ffff" font-size="12" font-weight="600">PLATFORM</text>
+    <text x="752" y="223" text-anchor="middle" fill="#00ffff" font-size="12" font-weight="600">ENGINEER</text>
+    <rect x="700" y="237" width="105" height="13" rx="3" fill="#00ffff" opacity="0.8"/>
+  </g>
+
+  <!-- Connecting lines -->
+  <line x1="225" y1="235" x2="430" y2="305" stroke="#00ffff" stroke-width="3" opacity="0.7" class="dash"/>
+  <line x1="675" y1="235" x2="470" y2="305" stroke="#00ffff" stroke-width="3" opacity="0.7" class="dash"/>
+  <line x1="450" y1="170" x2="450" y2="280" stroke="#00ffff" stroke-width="3" opacity="0.8" class="dash"/>
+
+  <!-- Central K8s Core -->
+  <g class="pulse">
+    <circle cx="450" cy="380" r="88" fill="none" stroke="#00ffff" stroke-width="20" opacity="0.18"/>
+    <circle cx="450" cy="380" r="68" fill="none" stroke="#00bfff" stroke-width="9" filter="url(#glow)"/>
+    <circle cx="450" cy="380" r="46" fill="none" stroke="#00ffff" stroke-width="5" opacity="0.75"/>
+    <text x="450" y="393" text-anchor="middle" fill="#ffffff" font-size="46" font-weight="800" letter-spacing="-2" filter="url(#glow)" class="float">K8s</text>
+  </g>
+
+  <!-- Security Shield -->
+  <g>
+    <rect x="525" y="430" width="55" height="55" rx="8" fill="#9f1239" fill-opacity="0.15" stroke="#f87171" stroke-width="3"/>
+    <text x="552" y="458" text-anchor="middle" fill="#f87171" font-size="11" font-weight="700">TS</text>
+    <text x="552" y="472" text-anchor="middle" fill="#f87171" font-size="7">SECURE</text>
+  </g>
+
+  <!-- Floating dots -->
+  <circle cx="120" cy="120" r="4" fill="#00ffff" opacity="0.6">
+    <animate attributeName="cy" values="120;95;120" dur="7s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="780" cy="135" r="3.5" fill="#ff00ff" opacity="0.5">
+    <animate attributeName="cx" values="780;800;780" dur="9s" repeatCount="indefinite"/>
+  </circle>
+</svg>
+        </div>
+        <div class="about-text reveal">
+          <h3>My Journey</h3>
+          <div id="journeyParas">
+            <p>Platform Engineer specializing in secure Kubernetes environments and DevSecOps infrastructure, with experience supporting both cloud and air-gapped platforms in high-security (DoD) environments.</p>
+            <p>Proven track record in building and maintaining scalable, compliant systems, with a strong focus on platform reliability, CI/CD automation, and operational excellence. Holds Top Secret Clearance and experienced in working within classified and mission-critical environments.</p>
+          </div>
+          <div class="timeline-section">
+            <h3>Experience</h3>
+            <div class="timeline">
+              <div class="timeline-item">
+                <h4>Platform Engineer</h4>
+                <p class="date">2025 – Present</p>
+                <p>Leading platform engineering initiatives, designing secure Kubernetes architectures, and implementing DevSecOps practices in classified environments.</p>
+              </div>
+              <div class="timeline-item">
+                <h4>DevOps Engineer</h4>
+                <p class="date">2020 – 2025</p>
+                <p>Built and maintained CI/CD pipelines, managed cloud infrastructure on AWS, automated deployments, and improved system reliability across multiple environments.</p>
+              </div>
+              <div class="timeline-item">
+                <h4>Linux System Administrator</h4>
+                <p class="date">2018 – 2020</p>
+                <p>Managed Linux server infrastructure, implemented configuration management with Ansible, and migrated legacy systems to containerized workloads.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
+    <!-- SKILLS SECTION -->
+    <section class="section" id="skills">
+      <div class="section-header reveal">
+        <h2 class="section-title">Technical <span class="highlight">Skills</span></h2>
+        <p class="section-sub">A showcase of my technical expertise and tools I work with.</p>
+      </div>
+      <div class="skills-grid" id="skillsGrid"></div>
+    </section>
 
-    <!-- ===============================
-         CONTACT SECTION
-    ================================= -->
+    <!-- PROJECTS SECTION -->
+    <section class="section" id="projects">
+      <div class="section-header reveal">
+        <h2 class="section-title">My <span class="highlight">Projects</span></h2>
+        <p class="section-sub">A collection of my work showcasing different technologies and solutions.</p>
+      </div>
+      <div class="projects-grid" id="projectsGrid"></div>
+    </section>
 
-    <section id="contact" class="section snap-section reveal">
-      <h2>Contact</h2>
-      <p class="section__sub">Send a message directly.</p>
+    <!-- TESTIMONIALS SECTION -->
+    <section class="section" id="testimonials">
+      <div class="section-header reveal">
+        <h2 class="section-title">Client <span class="highlight">Testimonials</span></h2>
+        <p class="section-sub">Some of the feedback I've received from colleagues and clients.</p>
+      </div>
+      <div class="testimonials-slider reveal">
+        <div class="testimonials-track" id="testimonialsTrack"></div>
+        <div class="slider-controls">
+          <button class="slider-arrow" id="prevSlide" aria-label="Previous"></button>
+          <div class="slider-dots" id="sliderDots"></div>
+          <button class="slider-arrow" id="nextSlide" aria-label="Next"></button>
+        </div>
+      </div>
+    </section>
 
-      <form class="form" action="https://formspree.io/f/xdalwjqz" method="POST">
-        <input type="email" name="email" placeholder="Your email" required />
-        <textarea name="message" rows="5" placeholder="Your message" required></textarea>
-        <button class="btn glow" type="submit">Send</button>
+    <!-- CONTACT SECTION -->
+   <section class="section" id="contact">
+  <div class="section-header reveal">
+    <h2 class="section-title">Get In <span class="highlight">Touch</span></h2>
+    <p class="section-sub">Have a project in mind or want to explore collaboration opportunities? Let's talk!</p>
+  </div>
+
+  <div class="contact-grid">
+    <div class="contact-info reveal">
+      <h3>Contact Information</h3>
+      <div class="contact-item">
+        <div class="contact-icon blue">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+        </div>
+        <div>
+          <p class="contact-item-label">Email</p>
+          <p class="contact-item-value"><a href="mailto:keuly1989@gmail.com">keuly1989@gmail.com</a></p>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon green">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        </div>
+        <div>
+          <p class="contact-item-label">Location</p>
+          <p class="contact-item-value">Available for remote work worldwide</p>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon red">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        </div>
+        <div>
+          <p class="contact-item-label">Availability</p>
+          <p class="contact-item-value">Open to full-remote platform engineering roles</p>
+        </div>
+      </div>
+
+      <div class="social-section">
+        <h4>Connect on social media</h4>
+        <div class="social-links">
+          <!-- Your social links remain unchanged -->
+          <a class="social-link" href="https://github.com/keulyt" target="_blank" rel="noopener" aria-label="GitHub">GitHub</a>
+          <a class="social-link" href="https://www.linkedin.com/in/keuly-yemele/" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
+          <a class="social-link" href="mailto:keuly1989@gmail.com" aria-label="Email">Email</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-form-wrap reveal">
+      <h3>Send a Message</h3>
+      <form id="contactForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="formName">Your Name</label>
+            <input type="text" id="formName" name="name" placeholder="your name" required />
+          </div>
+          <div class="form-group">
+            <label for="formEmail">Your Email</label>
+            <input type="email" id="formEmail" name="email" placeholder="your@email.com" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="formMessage">Your Message</label>
+          <textarea id="formMessage" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+        </div>
+        <button class="form-submit" id="formSubmit" type="submit">Send Message</button>
+        <p id="formStatus" class="form-status"></p>
       </form>
-
-      <footer class="footer">
-        © <span id="year"></span> Keuly T. Yemele
-      </footer>
-    </section>
+    </div>
+  </div>
+</section>
 
   </main>
 
+  <footer class="footer">
+    <span>© <span id="footerYear"></span> Keuly T. Yemele • Platform Engineer</span>
+  </footer>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
