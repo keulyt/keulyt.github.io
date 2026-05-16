@@ -74,8 +74,8 @@
         "Platform upgrades, patching, and node lifecycle operations",
         "STIG-aligned secure platform operations"
       ],
-      "image": "assets/k8s.png",
-      "imageHover": "assets/k8s.png",
+      "image": "assets/airgap.png",
+      "imageHover": "assets/airgap.png",
       "tech": ["RKE2", "Kubernetes", "Harbor", "GitLab", "Zarf"],
       "links": [
         { "label": "GitHub", "url": "https://github.com/keulyt" }
