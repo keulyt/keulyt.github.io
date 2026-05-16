@@ -41,8 +41,8 @@
         "Policy-as-code with OPA integration",
         "Automated drift detection and remediation"
       ],
-      "image": "assets/infastructureCode.png",
-      "imageHover": "assets/infrastructureCode.png",
+      "image": "assets/infrastructure-as-code.png",
+      "imageHover": "assets/infrastructure-as-code.png",
       "tech": ["Terraform", "Ansible", "AWS", "CloudFormation"],
       "links": [
         { "label": "GitHub", "url": "https://github.com/keulyt" }
