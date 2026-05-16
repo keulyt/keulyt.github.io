@@ -41,8 +41,8 @@
         "Policy-as-code with OPA integration",
         "Automated drift detection and remediation"
       ],
-      "image": "assets/infrastructure-as-code.png",
-      "imageHover": "assets/infrastructure-as-code.png",
+      "image": "assets/InfrastructureCode.png",
+      "imageHover": "assets/InfrastructureCode.png",
       "tech": ["Terraform", "Ansible", "AWS", "CloudFormation"],
       "links": [
         { "label": "GitHub", "url": "https://github.com/keulyt" }
@@ -61,6 +61,86 @@
       "image": "assets/monitoring_observability.png",
       "imageHover": "assets/monitoring_observability.png",
       "tech": ["Prometheus", "Datadog", "Splunk", "Coroot"],
+      "links": [
+        { "label": "GitHub", "url": "https://github.com/keulyt" }
+      ]
+    },
+    {
+      "title": "Air-Gapped Kubernetes Platform Engineering",
+      "description": "Secure Kubernetes platform engineering for classified and disconnected environments with controlled software supply chains.",
+      "features": [
+        "RKE2 cluster lifecycle management in air-gapped environments",
+        "Secure artifact delivery with internal registries and portable deployment tooling",
+        "Platform upgrades, patching, and node lifecycle operations",
+        "STIG-aligned secure platform operations"
+      ],
+      "image": "assets/k8s.png",
+      "imageHover": "assets/k8s.png",
+      "tech": ["RKE2", "Kubernetes", "Harbor", "GitLab", "Zarf"],
+      "links": [
+        { "label": "GitHub", "url": "https://github.com/keulyt" }
+      ]
+    },
+    {
+      "title": "GitLab Runner Platform Automation",
+      "description": "Scalable CI/CD runner infrastructure for enterprise Kubernetes platform engineering workflows.",
+      "features": [
+        "Kubernetes-based GitLab shared runners",
+        "Runner autoscaling optimization",
+        "Resource tuning and ephemeral storage management",
+        "Secure internal registry integrations"
+      ],
+      "image": "assets/cd_pipeline-DevSecOp.png",
+      "imageHover": "assets/cd_pipeline-DevSecOp.png",
+      "tech": ["GitLab CI", "Kubernetes", "AWS", "Helm"],
+      "links": [
+        { "label": "GitHub", "url": "https://github.com/keulyt" }
+      ]
+    },
+    {
+      "title": "Disaster Recovery & Backup Automation",
+      "description": "Kubernetes backup and disaster recovery automation for mission-critical platform services.",
+      "features": [
+        "Velero backup and restore automation",
+        "Namespace recovery validation",
+        "Scheduled backup orchestration",
+        "Storage troubleshooting across persistent workloads"
+      ],
+      "image": "assets/InfrastructureCode.png",
+      "imageHover": "assets/InfrastructureCode.png",
+      "tech": ["Velero", "Kubernetes", "Helm", "Longhorn"],
+      "links": [
+        { "label": "GitHub", "url": "https://github.com/keulyt" }
+      ]
+    },
+    {
+      "title": "Identity & Secure Platform Access",
+      "description": "Secure authentication and access management integrations for enterprise platform services.",
+      "features": [
+        "OIDC authentication integrations",
+        "Keycloak troubleshooting and token validation",
+        "RBAC access governance",
+        "Secure application authentication flows"
+      ],
+      "image": "assets/monitoring_observability.png",
+      "imageHover": "assets/monitoring_observability.png",
+      "tech": ["Keycloak", "OIDC", "Kubernetes", "Security"],
+      "links": [
+        { "label": "GitHub", "url": "https://github.com/keulyt" }
+      ]
+    },
+    {
+      "title": "Platform Modernization & Service Migration",
+      "description": "Modernization of platform services through architecture upgrades, migrations, and operational resilience improvements.",
+      "features": [
+        "PostgreSQL operator migration planning and execution",
+        "Service continuity for Nexus, Jira, and Keycloak",
+        "Capacity planning and rollback strategy",
+        "Production migration troubleshooting"
+      ],
+      "image": "assets/InfrastructureCode.png",
+      "imageHover": "assets/InfrastructureCode.png",
+      "tech": ["PostgreSQL", "CNPG", "Kubernetes", "DevOps"],
       "links": [
         { "label": "GitHub", "url": "https://github.com/keulyt" }
       ]
