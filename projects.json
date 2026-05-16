@@ -9,8 +9,8 @@
         "Automated canary analysis and rollbacks",
         "RBAC and network policy enforcement"
       ],
-      "image": "https://images.pexels.com/photos/27826479/pexels-photo-27826479.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=400&w=600",
-      "imageHover": "https://images.pexels.com/photos/33512155/pexels-photo-33512155.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=400&w=600",
+      "image": "assets/k8s.png",
+      "imageHover": "assets/k8s.png",
       "tech": ["Kubernetes", "AWS", "Helm", "ArgoCD"],
       "links": [
         { "label": "GitHub", "url": "https://github.com/keulyt" }
@@ -25,8 +25,8 @@
         "Progressive delivery with canary analysis",
         "Multi-environment deployment orchestration"
       ],
-      "image": "https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=400&w=600",
-      "imageHover": "https://images.pexels.com/photos/17485657/pexels-photo-17485657.png?auto=compress&cs=tinysrgb&fit=crop&h=400&w=600",
+      "image": "assets/cd_pipeline-DevSecOp.png",
+      "imageHover": "assets/cd_pipeline-DevSecOp.png",
       "tech": ["Jenkins", "GitLab", "DevSecOps", "Docker"],
       "links": [
         { "label": "GitHub", "url": "https://github.com/keulyt" }
@@ -41,8 +41,8 @@
         "Policy-as-code with OPA integration",
         "Automated drift detection and remediation"
       ],
-      "image": "https://images.pexels.com/photos/30547616/pexels-photo-30547616.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=400&w=600",
-      "imageHover": "https://images.pexels.com/photos/30547568/pexels-photo-30547568.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=400&w=600",
+      "image": "assets/InfrastructureCode.png",
+      "imageHover": "assets/InfrastructureCode.png",
       "tech": ["Terraform", "Ansible", "AWS", "CloudFormation"],
       "links": [
         { "label": "GitHub", "url": "https://github.com/keulyt" }
@@ -53,6 +53,7 @@
       "description": "Comprehensive monitoring stack for real-time visibility into platform health and security.",
       "features": [
         "Centralized metrics with Prometheus",
+        "eBPF-powered application observability with Coroot",
         "Distributed tracing with OpenTelemetry",
         "Log aggregation with Splunk and Loki",
         "Custom dashboards and alerting rules"
