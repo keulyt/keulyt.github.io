@@ -90,8 +90,8 @@
         "Resource tuning and ephemeral storage management",
         "Secure internal registry integrations"
       ],
-      "image": "assets/cd_pipeline-DevSecOp.png",
-      "imageHover": "assets/cd_pipeline-DevSecOp.png",
+      "image": "assets/gitlab.png",
+      "imageHover": "assets/gitlab.png",
       "tech": ["GitLab CI", "Kubernetes", "AWS", "Helm"],
       "links": [
         { "label": "GitHub", "url": "https://github.com/keulyt" }
@@ -106,8 +106,8 @@
         "Scheduled backup orchestration",
         "Storage troubleshooting across persistent workloads"
       ],
-      "image": "assets/InfrastructureCode.png",
-      "imageHover": "assets/InfrastructureCode.png",
+      "image": "assets/velero.png",
+      "imageHover": "assets/velero.png",
       "tech": ["Velero", "Kubernetes", "Helm", "Longhorn"],
       "links": [
         { "label": "GitHub", "url": "https://github.com/keulyt" }
@@ -122,8 +122,8 @@
         "RBAC access governance",
         "Secure application authentication flows"
       ],
-      "image": "assets/monitoring_observability.png",
-      "imageHover": "assets/monitoring_observability.png",
+      "image": "assets/keycloak.png",
+      "imageHover": "assets/keycloak.png",
       "tech": ["Keycloak", "OIDC", "Kubernetes", "Security"],
       "links": [
         { "label": "GitHub", "url": "https://github.com/keulyt" }
@@ -138,8 +138,8 @@
         "Capacity planning and rollback strategy",
         "Production migration troubleshooting"
       ],
-      "image": "assets/InfrastructureCode.png",
-      "imageHover": "assets/InfrastructureCode.png",
+      "image": "assets/cnpg-postgresql.png",
+      "imageHover": "assets/cnpg-postgresql.png",
       "tech": ["PostgreSQL", "CNPG", "Kubernetes", "DevOps"],
       "links": [
         { "label": "GitHub", "url": "https://github.com/keulyt" }
