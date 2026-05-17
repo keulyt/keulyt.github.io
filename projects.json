@@ -11,7 +11,12 @@
       ],
       "image": "assets/k8s.png",
       "imageHover": "assets/k8s.png",
-      "tech": ["Kubernetes", "AWS", "Helm", "ArgoCD"],
+      "tech": [
+        { "label": "Kubernetes", "url": "https://kubernetes.io/" },
+        { "label": "AWS", "url": "https://aws.amazon.com/" },
+        { "label": "Helm", "url": "https://helm.sh/" },
+        { "label": "ArgoCD", "url": "https://argo-cd.readthedocs.io/" }
+      ],
       "links": [
         { "label": "GitHub", "url": "https://github.com/keulyt" }
       ]
@@ -27,7 +32,12 @@
       ],
       "image": "assets/cd_pipeline-DevSecOp.png",
       "imageHover": "assets/cd_pipeline-DevSecOp.png",
-      "tech": ["Jenkins", "GitLab", "DevSecOps", "Docker"],
+      "tech": [
+        { "label": "Jenkins", "url": "https://www.jenkins.io/" },
+        { "label": "GitLab", "url": "https://about.gitlab.com/" },
+        { "label": "DevSecOps", "url": "https://aws.amazon.com/devops/what-is-devsecops/" },
+        { "label": "Docker", "url": "https://www.docker.com/" }
+      ],
       "links": [
         { "label": "GitHub", "url": "https://github.com/keulyt" }
       ]
@@ -43,7 +53,12 @@
       ],
       "image": "assets/infrastructure-as-code.png",
       "imageHover": "assets/infrastructure-as-code.png",
-      "tech": ["Terraform", "Ansible", "AWS", "CloudFormation"],
+      "tech": [
+        { "label": "Terraform", "url": "https://www.terraform.io/" },
+        { "label": "Ansible", "url": "https://www.ansible.com/" },
+        { "label": "AWS", "url": "https://aws.amazon.com/" },
+        { "label": "CloudFormation", "url": "https://aws.amazon.com/cloudformation/" }
+      ],
       "links": [
         { "label": "GitHub", "url": "https://github.com/keulyt" }
       ]
@@ -60,7 +75,12 @@
       ],
       "image": "assets/monitoring_observability.png",
       "imageHover": "assets/monitoring_observability.png",
-      "tech": ["Prometheus", "Datadog", "Splunk", "Coroot"],
+      "tech": [
+        { "label": "Prometheus", "url": "https://prometheus.io/" },
+        { "label": "Datadog", "url": "https://www.datadoghq.com/" },
+        { "label": "Splunk", "url": "https://www.splunk.com/" },
+        { "label": "Coroot", "url": "https://coroot.com/" }
+      ],
       "links": [
         { "label": "GitHub", "url": "https://github.com/keulyt" }
       ]
@@ -76,7 +96,13 @@
       ],
       "image": "assets/airgap.png",
       "imageHover": "assets/airgap.png",
-      "tech": ["RKE2", "Kubernetes", "Harbor", "GitLab", "Zarf"],
+      "tech": [
+        { "label": "RKE2", "url": "https://docs.rke2.io/" },
+        { "label": "Kubernetes", "url": "https://kubernetes.io/" },
+        { "label": "Harbor", "url": "https://goharbor.io/" },
+        { "label": "GitLab", "url": "https://about.gitlab.com/" },
+        { "label": "Zarf", "url": "https://zarf.dev/" }
+      ],
       "links": [
         { "label": "GitHub", "url": "https://github.com/keulyt" }
       ]
@@ -92,7 +118,12 @@
       ],
       "image": "assets/gitlab.png",
       "imageHover": "assets/gitlab.png",
-      "tech": ["GitLab CI", "Kubernetes", "AWS", "Helm"],
+      "tech": [
+        { "label": "GitLab CI", "url": "https://about.gitlab.com/" },
+        { "label": "Kubernetes", "url": "https://kubernetes.io/" },
+        { "label": "AWS", "url": "https://aws.amazon.com/" },
+        { "label": "Helm", "url": "https://helm.sh/" }
+      ],
       "links": [
         { "label": "GitHub", "url": "https://github.com/keulyt" }
       ]
@@ -108,7 +139,12 @@
       ],
       "image": "assets/velero.png",
       "imageHover": "assets/velero.png",
-      "tech": ["Velero", "Kubernetes", "Helm", "Longhorn"],
+      "tech": [
+        { "label": "Velero", "url": "https://velero.io/" },
+        { "label": "Kubernetes", "url": "https://kubernetes.io/" },
+        { "label": "Helm", "url": "https://helm.sh/" },
+        { "label": "Longhorn", "url": "https://longhorn.io/" }
+      ],
       "links": [
         { "label": "GitHub", "url": "https://github.com/keulyt" }
       ]
@@ -124,7 +160,12 @@
       ],
       "image": "assets/keycloak.png",
       "imageHover": "assets/keycloak.png",
-      "tech": ["Keycloak", "OIDC", "Kubernetes", "Security"],
+      "tech": [
+        { "label": "Keycloak", "url": "https://www.keycloak.org/" },
+        { "label": "OIDC", "url": "https://openid.net/connect/" },
+        { "label": "Kubernetes", "url": "https://kubernetes.io/" },
+        { "label": "OWASP", "url": "https://owasp.org/" }
+      ],
       "links": [
         { "label": "GitHub", "url": "https://github.com/keulyt" }
       ]
@@ -140,7 +181,12 @@
       ],
       "image": "assets/cnpg-postgresql.png",
       "imageHover": "assets/cnpg-postgresql.png",
-      "tech": ["PostgreSQL", "CNPG", "Kubernetes", "DevOps"],
+      "tech": [
+        { "label": "PostgreSQL", "url": "https://www.postgresql.org/" },
+        { "label": "CNPG", "url": "https://cloudnative-pg.io/" },
+        { "label": "Kubernetes", "url": "https://kubernetes.io/" },
+        { "label": "DevOps", "url": "https://aws.amazon.com/devops/what-is-devops/" }
+      ],
       "links": [
         { "label": "GitHub", "url": "https://github.com/keulyt" }
       ]
