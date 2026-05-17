@@ -20,16 +20,20 @@
   };
 
   const ICON_MAP = {
-    servers: ICONS.skillServers, lightning: ICONS.skillLightning,
-    chart: ICONS.skillChart, cloud: ICONS.skillCloud,
-    database: ICONS.skillDatabase, code: ICONS.skillCode, network: ICONS.skillNetwork
+    servers: ICONS.skillServers,
+    lightning: ICONS.skillLightning,
+    chart: ICONS.skillChart,
+    cloud: ICONS.skillCloud,
+    database: ICONS.skillDatabase,
+    code: ICONS.skillCode,
+    network: ICONS.skillNetwork
   };
 
   // ================================================================
   //  2. CONTENT LOADER
   // ================================================================
-  let skillsData       = null;
-  let projectsData     = null;
+  let skillsData = null;
+  let projectsData = null;
   let testimonialsData = null;
 
   async function loadJSON(path) {
@@ -64,14 +68,20 @@
 
   function renderSkills() {
     const colorMap = {
-      servers: "blue", lightning: "green", chart: "purple",
-      cloud: "cyan", database: "orange", code: "red", network: "blue"
+      servers: "blue",
+      lightning: "green",
+      chart: "purple",
+      cloud: "cyan",
+      database: "orange",
+      code: "red",
+      network: "blue"
     };
 
     const grid = document.getElementById("skillsGrid");
     grid.innerHTML = skillsData.categories.map((cat) => {
-      const icon  = ICON_MAP[cat.icon]  || "";
+      const icon = ICON_MAP[cat.icon] || "";
       const color = colorMap[cat.icon] || "blue";
+
       const bars = cat.skills.map(s => `
         <div class="skill-bar-group">
           <div class="skill-bar-label">
@@ -83,6 +93,7 @@
           </div>
         </div>
       `).join("");
+
       return `
         <div class="skill-category reveal">
           <div class="skill-cat-header">
@@ -97,17 +108,36 @@
 
   function renderProjects() {
     const grid = document.getElementById("projectsGrid");
+
     grid.innerHTML = projectsData.items.map((p) => {
       const imgPrimary = p.image
         ? `<img src="${p.image}" alt="${p.title}" loading="lazy" />`
         : "";
+
       const imgSecondary = p.imageHover
         ? `<img src="${p.imageHover}" alt="${p.title}" loading="lazy" />`
         : imgPrimary;
 
       const features = (p.features || []).map(f => `<li>${f}</li>`).join("");
-      const tech = p.tech.map(t => `<span>${t}</span>`).join("");
-      const links = p.links.map(l => `
+
+      const tech = (p.tech || []).map(t => {
+        if (typeof t === "string") {
+          return `<span>${t}</span>`;
+        }
+
+        return `
+          <a
+            href="${t.url}"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="tech-link"
+          >
+            ${t.label}
+          </a>
+        `;
+      }).join("");
+
+      const links = (p.links || []).map(l => `
         <a class="proj-btn" href="${l.url}" target="_blank" rel="noopener">
           ${ICONS.external} ${l.label}
         </a>
@@ -134,109 +164,112 @@
     }).join("");
   }
 
- function renderTestimonials() {
-  const track = document.getElementById("testimonialsTrack");
-  
+  function renderTestimonials() {
+    const track = document.getElementById("testimonialsTrack");
+    const allTestimonials = testimonialsData.slides.flat();
 
-  const allTestimonials = testimonialsData.slides.flat();
+    track.innerHTML = allTestimonials.map(t => {
+      const stars = "★".repeat(t.stars);
 
-  track.innerHTML = allTestimonials.map(t => {
-    const stars = "★".repeat(t.stars);
-    return `
-      <div class="testimonial-card">
-        <div class="t-card">
-          <div class="t-stars">${stars}</div>
-          <p class="t-quote">"${t.quote}"</p>
-          <div class="t-author">
-            <div class="t-avatar">${t.initials}</div>
-            <div>
-              <p class="t-name">${t.name}</p>
-              <p class="t-date">${t.role}</p>
+      return `
+        <div class="testimonial-card">
+          <div class="t-card">
+            <div class="t-stars">${stars}</div>
+            <p class="t-quote">"${t.quote}"</p>
+            <div class="t-author">
+              <div class="t-avatar">${t.initials}</div>
+              <div>
+                <p class="t-name">${t.name}</p>
+                <p class="t-date">${t.role}</p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    `;
-  }).join("");
+      `;
+    }).join("");
 
-  // Create a dot for every single card
-  const dotsWrap = document.getElementById("sliderDots");
-  dotsWrap.innerHTML = allTestimonials.map((_, i) =>
-    `<button class="slider-dot${i === 0 ? " active" : ""}" data-index="${i}"></button>`
-  ).join("");
-}
-
-// ================================================================
-//  4. CONTACT FORM - EmailJS
-// ================================================================
-
-function initContactForm() {
-  const contactForm = document.getElementById('contactForm');
-  if (!contactForm) {
-    console.warn("Contact form not found on page");
-    return;
+    const dotsWrap = document.getElementById("sliderDots");
+    dotsWrap.innerHTML = allTestimonials.map((_, i) =>
+      `<button class="slider-dot${i === 0 ? " active" : ""}" data-index="${i}"></button>`
+    ).join("");
   }
 
-  emailjs.init({
-    publicKey: "WcKIsGzx8-C4X1FMK",
-  });
+  // ================================================================
+  //  4. CONTACT FORM - EmailJS
+  // ================================================================
 
-  const formSubmit = document.getElementById('formSubmit');
-  const formStatus = document.getElementById('formStatus');
+  function initContactForm() {
+    const contactForm = document.getElementById("contactForm");
 
-  contactForm.addEventListener('submit', function(e) {
-    e.preventDefault();
+    if (!contactForm) {
+      console.warn("Contact form not found on page");
+      return;
+    }
 
-    formSubmit.disabled = true;
-    formSubmit.innerHTML = `<span class="sending-spinner"></span> Sending...`;
-    formStatus.textContent = "";
+    emailjs.init({
+      publicKey: "WcKIsGzx8-C4X1FMK",
+    });
 
-    const serviceID = "service_n07qg9n";
-    const templateID = "template_pi5o6sg";   // ← CHANGE THIS
+    const formSubmit = document.getElementById("formSubmit");
+    const formStatus = document.getElementById("formStatus");
 
-    emailjs.sendForm(serviceID, templateID, this)
-      .then(() => {
-        formStatus.style.color = "#00ff88";
-        formStatus.textContent = "✅ Message sent successfully!";
-        contactForm.reset();
-      })
-      .catch((error) => {
-        console.error("EmailJS Full Error:", error);
-        formStatus.style.color = "#ff6b6b";
+    contactForm.addEventListener("submit", function (e) {
+      e.preventDefault();
 
-        if (error.text && error.text.includes("template")) {
-          formStatus.innerHTML = `❌ <strong>ID not found.</strong>`;
-        } else {
-          formStatus.textContent = "❌ Failed to send. Please try again.";
-        }
-      })
-      .finally(() => {
-        formSubmit.disabled = false;
-        formSubmit.textContent = "Send Message";
-      });
-  });
-}
+      formSubmit.disabled = true;
+      formSubmit.innerHTML = `<span class="sending-spinner"></span> Sending...`;
+      formStatus.textContent = "";
+
+      const serviceID = "service_n07qg9n";
+      const templateID = "template_pi5o6sg";
+
+      emailjs.sendForm(serviceID, templateID, this)
+        .then(() => {
+          formStatus.style.color = "#00ff88";
+          formStatus.textContent = "✅ Message sent successfully!";
+          contactForm.reset();
+        })
+        .catch((error) => {
+          console.error("EmailJS Full Error:", error);
+          formStatus.style.color = "#ff6b6b";
+
+          if (error.text && error.text.includes("template")) {
+            formStatus.innerHTML = `❌ <strong>ID not found.</strong>`;
+          } else {
+            formStatus.textContent = "❌ Failed to send. Please try again.";
+          }
+        })
+        .finally(() => {
+          formSubmit.disabled = false;
+          formSubmit.textContent = "Send Message";
+        });
+    });
+  }
 
   // ================================================================
-  //  4. UI INTERACTIONS
+  //  5. UI INTERACTIONS
   // ================================================================
 
   function initTheme() {
-    const root   = document.documentElement;
+    const root = document.documentElement;
     const toggle = document.getElementById("themeToggle");
+
     function getPreferred() {
       const saved = localStorage.getItem("theme");
       if (saved === "light" || saved === "dark") return saved;
       return window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
     }
+
     function apply(theme) {
       root.setAttribute("data-theme", theme);
       toggle.innerHTML = theme === "light" ? ICONS.sun : ICONS.moon;
     }
+
     apply(getPreferred());
+
     toggle.addEventListener("click", () => {
       const current = root.getAttribute("data-theme") === "light" ? "light" : "dark";
-      const next    = current === "light" ? "dark" : "light";
+      const next = current === "light" ? "dark" : "light";
       localStorage.setItem("theme", next);
       apply(next);
     });
@@ -244,8 +277,10 @@ function initContactForm() {
 
   function initMobileNav() {
     const navToggle = document.getElementById("navToggle");
-    const mainNav   = document.getElementById("mainNav");
+    const mainNav = document.getElementById("mainNav");
+
     navToggle.addEventListener("click", () => mainNav.classList.toggle("open"));
+
     mainNav.querySelectorAll("a").forEach(a =>
       a.addEventListener("click", () => mainNav.classList.remove("open"))
     );
@@ -253,13 +288,21 @@ function initContactForm() {
 
   function initCursorGlow() {
     const glow = document.querySelector(".cursor-glow");
-    let mx = window.innerWidth / 2, my = window.innerHeight / 2, gx = mx, gy = my;
-    window.addEventListener("mousemove", e => { mx = e.clientX; my = e.clientY; });
+    let mx = window.innerWidth / 2;
+    let my = window.innerHeight / 2;
+    let gx = mx;
+    let gy = my;
+
+    window.addEventListener("mousemove", e => {
+      mx = e.clientX;
+      my = e.clientY;
+    });
+
     (function loop() {
       gx += (mx - gx) * 0.12;
       gy += (my - gy) * 0.12;
       glow.style.left = `${gx - 260}px`;
-      glow.style.top  = `${gy - 260}px`;
+      glow.style.top = `${gy - 260}px`;
       requestAnimationFrame(loop);
     })();
   }
@@ -268,54 +311,87 @@ function initContactForm() {
     const canvas = document.createElement("canvas");
     canvas.id = "bg-canvas";
     document.body.appendChild(canvas);
+
     const ctx = canvas.getContext("2d", { alpha: true });
+
     function resize() {
-      canvas.width  = window.innerWidth;
+      canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     }
+
     resize();
     window.addEventListener("resize", resize);
-    let gx = window.innerWidth / 2, gy = window.innerHeight / 2;
-    window.addEventListener("mousemove", e => { gx = e.clientX; gy = e.clientY; });
+
+    let gx = window.innerWidth / 2;
+    let gy = window.innerHeight / 2;
+
+    window.addEventListener("mousemove", e => {
+      gx = e.clientX;
+      gy = e.clientY;
+    });
+
     const nodes = [];
+
     for (let i = 0; i < 50; i++) {
       const depth = Math.random() * 0.65 + 0.35;
+
       nodes.push({
-        x: Math.random() * canvas.width, y: Math.random() * canvas.height,
-        vx: (Math.random() - 0.5) * 0.9 * depth, vy: (Math.random() - 0.5) * 0.9 * depth,
-        r: Math.random() * 1.2 + 1.2 * depth, depth
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        vx: (Math.random() - 0.5) * 0.9 * depth,
+        vy: (Math.random() - 0.5) * 0.9 * depth,
+        r: Math.random() * 1.2 + 1.2 * depth,
+        depth
       });
     }
+
     (function draw() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      const px = (gx / canvas.width  - 0.5) * 26;
+
+      const px = (gx / canvas.width - 0.5) * 26;
       const py = (gy / canvas.height - 0.5) * 26;
+
       for (const n of nodes) {
-        n.x += n.vx; n.y += n.vy;
-        if (n.x < -40) n.x = canvas.width  + 40;
-        if (n.x > canvas.width  + 40) n.x = -40;
+        n.x += n.vx;
+        n.y += n.vy;
+
+        if (n.x < -40) n.x = canvas.width + 40;
+        if (n.x > canvas.width + 40) n.x = -40;
         if (n.y < -40) n.y = canvas.height + 40;
         if (n.y > canvas.height + 40) n.y = -40;
+
         ctx.beginPath();
         ctx.arc(n.x + px * n.depth, n.y + py * n.depth, n.r, 0, Math.PI * 2);
         ctx.fillStyle = "rgba(0,191,255,0.85)";
         ctx.fill();
       }
+
       for (let i = 0; i < nodes.length; i++) {
         for (let j = i + 1; j < nodes.length; j++) {
-          const a = nodes[i], b = nodes[j];
-          const ax = a.x + px * a.depth, ay = a.y + py * a.depth;
-          const bx = b.x + px * b.depth, by = b.y + py * b.depth;
-          const dx = ax - bx, dy = ay - by;
+          const a = nodes[i];
+          const b = nodes[j];
+
+          const ax = a.x + px * a.depth;
+          const ay = a.y + py * a.depth;
+          const bx = b.x + px * b.depth;
+          const by = b.y + py * b.depth;
+
+          const dx = ax - bx;
+          const dy = ay - by;
           const dist = Math.sqrt(dx * dx + dy * dy);
           const threshold = 130 * Math.min(a.depth, b.depth);
+
           if (dist < threshold) {
-            ctx.beginPath(); ctx.moveTo(ax, ay); ctx.lineTo(bx, by);
+            ctx.beginPath();
+            ctx.moveTo(ax, ay);
+            ctx.lineTo(bx, by);
             ctx.strokeStyle = `rgba(0,191,255,${(1 - dist / threshold) * 0.22})`;
-            ctx.lineWidth = 1; ctx.stroke();
+            ctx.lineWidth = 1;
+            ctx.stroke();
           }
         }
       }
+
       requestAnimationFrame(draw);
     })();
   }
@@ -323,21 +399,29 @@ function initContactForm() {
   function initReveal() {
     function onScroll() {
       const wh = window.innerHeight;
+
       document.querySelectorAll(".reveal").forEach(el => {
-        if (el.getBoundingClientRect().top < wh - 80) el.classList.add("active");
+        if (el.getBoundingClientRect().top < wh - 80) {
+          el.classList.add("active");
+        }
       });
     }
+
     window.addEventListener("scroll", onScroll, { passive: true });
     onScroll();
   }
 
   function initSkillBars() {
     let animated = false;
+
     window.addEventListener("scroll", () => {
       if (animated) return;
+
       const el = document.getElementById("skills");
+
       if (el && el.getBoundingClientRect().top < window.innerHeight - 100) {
         animated = true;
+
         document.querySelectorAll(".skill-bar-fill").forEach(bar => {
           bar.style.width = bar.getAttribute("data-width") + "%";
         });
@@ -345,48 +429,48 @@ function initContactForm() {
     }, { passive: true });
   }
 
-function initSlider() {
-  const track = document.getElementById("testimonialsTrack");
-  const dots = document.querySelectorAll(".slider-dot");
-  const prevBtn = document.getElementById("prevSlide");
-  const nextBtn = document.getElementById("nextSlide");
+  function initSlider() {
+    const track = document.getElementById("testimonialsTrack");
+    const dots = document.querySelectorAll(".slider-dot");
+    const prevBtn = document.getElementById("prevSlide");
+    const nextBtn = document.getElementById("nextSlide");
 
-  let current = 0;
-  const cards = track.querySelectorAll('.testimonial-card');
-  const total = cards.length;
+    let current = 0;
 
- function goTo(index) {
-  const totalCards = track.querySelectorAll('.testimonial-card').length;
-  current = (index + totalCards) % totalCards;
+    function goTo(index) {
+      const totalCards = track.querySelectorAll(".testimonial-card").length;
+      current = (index + totalCards) % totalCards;
 
-  // Check if mobile
-  const isMobile = window.innerWidth <= 860;
-  const moveAmount = isMobile ? current * 100 : current * 50;
-  
-  track.style.transform = `translateX(-${moveAmount}%)`;
+      const isMobile = window.innerWidth <= 860;
+      const moveAmount = isMobile ? current * 100 : current * 50;
 
-  const dots = document.querySelectorAll(".slider-dot");
-  dots.forEach((dot, i) => dot.classList.toggle("active", i === current));
-}
+      track.style.transform = `translateX(-${moveAmount}%)`;
 
-  nextBtn.addEventListener("click", () => goTo(current + 1));
-  prevBtn.addEventListener("click", () => goTo(current - 1));
+      const dots = document.querySelectorAll(".slider-dot");
+      dots.forEach((dot, i) => dot.classList.toggle("active", i === current));
+    }
 
-  dots.forEach(dot => {
-    dot.addEventListener("click", () => goTo(parseInt(dot.dataset.index)));
-  });
+    nextBtn.addEventListener("click", () => goTo(current + 1));
+    prevBtn.addEventListener("click", () => goTo(current - 1));
 
-  // Auto-play
-  setInterval(() => goTo(current + 1), 5000);
-}
+    dots.forEach(dot => {
+      dot.addEventListener("click", () => goTo(parseInt(dot.dataset.index)));
+    });
+
+    setInterval(() => goTo(current + 1), 5000);
+  }
 
   function initActiveNav() {
     window.addEventListener("scroll", () => {
       const sections = document.querySelectorAll("section[id]");
       let currentId = "";
+
       sections.forEach(section => {
-        if (window.scrollY >= section.offsetTop - 120) currentId = section.getAttribute("id");
+        if (window.scrollY >= section.offsetTop - 120) {
+          currentId = section.getAttribute("id");
+        }
       });
+
       document.querySelectorAll(".nav a").forEach(link => {
         link.classList.toggle("active", link.getAttribute("href") === "#" + currentId);
       });
@@ -399,7 +483,7 @@ function initSlider() {
   }
 
   // ================================================================
-  //  5. BOOTSTRAP
+  //  6. BOOTSTRAP
   // ================================================================
   async function init() {
     await loadContent();
