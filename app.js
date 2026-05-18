@@ -245,7 +245,29 @@
         });
     });
   }
+   function initProjectsToggle() {
+  const toggleBtn = document.getElementById("toggleProjectsBtn");
+  const projectsGrid = document.getElementById("projectsGrid");
 
+  if (!toggleBtn || !projectsGrid) return;
+
+  toggleBtn.addEventListener("click", () => {
+    if (projectsGrid.classList.contains("collapsed")) {
+      projectsGrid.classList.remove("collapsed");
+      projectsGrid.classList.add("expanded");
+      toggleBtn.textContent = "Show Less";
+    } else {
+      projectsGrid.classList.remove("expanded");
+      projectsGrid.classList.add("collapsed");
+      toggleBtn.textContent = "See More Projects";
+
+      document.getElementById("projects").scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    }
+  });
+}
   // ================================================================
   //  5. UI INTERACTIONS
   // ================================================================
@@ -499,6 +521,7 @@
     initSkillBars();
     initSlider();
     initActiveNav();
+    initProjectsToggle();
     initContactForm();
   }
 
