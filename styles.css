@@ -488,6 +488,42 @@ text-align: left;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 28px;
+  transition: max-height 0.6s ease;
+  overflow: hidden;
+}
+
+/* collapsed state = show only first row */
+.projects-grid.collapsed {
+  max-height: 650px;
+}
+
+/* expanded state */
+.projects-grid.expanded {
+  max-height: 5000px;
+}
+
+.projects-toggle-wrap {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.see-more-btn {
+  padding: 14px 32px;
+  border-radius: 12px;
+  border: 1px solid rgba(0,191,255,0.35);
+  background: rgba(0,191,255,0.08);
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.see-more-btn:hover {
+  background: rgba(0,191,255,0.16);
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0,191,255,0.15);
 }
 
 .project-card {
