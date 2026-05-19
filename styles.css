@@ -492,14 +492,14 @@ text-align: left;
   overflow: hidden;
 }
 
-/* collapsed state = show only first row */
-.projects-grid.collapsed {
-  max-height: 650px;
+/* Show only the first project when collapsed */
+.projects-grid.collapsed .project-card:nth-child(n+2) {
+  display: none;
 }
 
-/* expanded state */
-.projects-grid.expanded {
-  max-height: 5000px;
+/* Show all projects when expanded */
+.projects-grid.expanded .project-card {
+  display: flex;
 }
 
 .projects-toggle-wrap {
