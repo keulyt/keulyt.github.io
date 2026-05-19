@@ -245,28 +245,41 @@
         });
     });
   }
-   function initProjectsToggle() {
-  const toggleBtn = document.getElementById("toggleProjectsBtn");
+function initProjectsToggle() {
+  const topBtn = document.getElementById("toggleProjectsBtnTop");
+  const bottomBtn = document.getElementById("toggleProjectsBtn");
   const projectsGrid = document.getElementById("projectsGrid");
 
-  if (!toggleBtn || !projectsGrid) return;
+  if (!projectsGrid) return;
 
-  toggleBtn.addEventListener("click", () => {
-    if (projectsGrid.classList.contains("collapsed")) {
+  function updateButtons(expanded) {
+    const text = expanded ? "Show Less" : "See More Projects";
+
+    if (topBtn) topBtn.textContent = text;
+    if (bottomBtn) bottomBtn.textContent = text;
+  }
+
+  function toggleProjects() {
+    const expanded = projectsGrid.classList.contains("expanded");
+
+    if (!expanded) {
       projectsGrid.classList.remove("collapsed");
       projectsGrid.classList.add("expanded");
-      toggleBtn.textContent = "Show Less";
+      updateButtons(true);
     } else {
       projectsGrid.classList.remove("expanded");
       projectsGrid.classList.add("collapsed");
-      toggleBtn.textContent = "See More Projects";
+      updateButtons(false);
 
       document.getElementById("projects").scrollIntoView({
         behavior: "smooth",
         block: "start"
       });
     }
-  });
+  }
+
+  if (topBtn) topBtn.addEventListener("click", toggleProjects);
+  if (bottomBtn) bottomBtn.addEventListener("click", toggleProjects);
 }
   // ================================================================
   //  5. UI INTERACTIONS
