@@ -725,7 +725,12 @@ text-align: left;
 }
 
 .proj-btn svg { width: 14px; height: 14px; }
-
+.projects-action-row {
+  display: flex;
+  justify-content: flex-end;
+  max-width: 1600px;
+  margin: -30px auto 28px;
+}
 
 /* ============================================================
   11. TESTIMONIALS SECTION
