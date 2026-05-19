@@ -730,8 +730,17 @@ text-align: left;
 .projects-action-row {
   display: flex;
   justify-content: flex-end;
-  max-width: 1600px;
-  margin: -30px auto 28px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 20px auto;
+}
+
+.projects-grid.collapsed .project-card:nth-child(n+4) {
+  display: none;
+}
+
+.projects-grid.expanded .project-card {
+  display: flex;
 }
 
 /* ============================================================
