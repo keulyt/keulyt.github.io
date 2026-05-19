@@ -1048,3 +1048,11 @@ flex: 0 0 50%;
   font-size: clamp(0.9rem, 2vw, 1.15rem);
   text-align: center;
 }
+.top-toggle {
+  margin-bottom: 24px;
+}
+
+.projects-toggle-wrap {
+  text-align: center;
+  margin-top: 30px;
+}
