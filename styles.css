@@ -729,7 +729,7 @@ text-align: left;
 .proj-btn svg { width: 14px; height: 14px; }
 .projects-action-row {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto 20px auto;
