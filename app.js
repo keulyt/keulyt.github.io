@@ -247,7 +247,6 @@
   }
 function initProjectsToggle() {
   const topBtn = document.getElementById("toggleProjectsBtnTop");
-  const bottomBtn = document.getElementById("toggleProjectsBtn");
   const projectsGrid = document.getElementById("projectsGrid");
 
   if (!projectsGrid) return;
@@ -256,7 +255,7 @@ function initProjectsToggle() {
     const text = expanded ? "Show Less" : "See More Projects";
 
     if (topBtn) topBtn.textContent = text;
-    if (bottomBtn) bottomBtn.textContent = text;
+    if (bottomBtn) bottomBtn.addEventListener("click", toggleProjects);
   }
 
   function toggleProjects() {
