@@ -496,7 +496,9 @@ text-align: left;
 .projects-grid.collapsed .project-card:nth-child(n+4) {
   display: none;
 }
-
+.projects-grid.expanded .project-card {
+  display: flex;
+}
 /* Show all projects when expanded */
 .projects-grid.expanded .project-card {
   display: flex;
