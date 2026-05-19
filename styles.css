@@ -1048,13 +1048,15 @@ flex: 0 0 50%;
   font-size: clamp(0.9rem, 2vw, 1.15rem);
   text-align: center;
 }
-.top-toggle {
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
 
 .projects-toggle-wrap {
-  text-align: center;
-  margin-top: 12px;
-  margin-bottom: 12px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.top-toggle {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
