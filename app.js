@@ -176,7 +176,7 @@
       btnEl.style.display = "";
     } else {
       if (allProjects.length > 3) {
-        btnEl.textContent = "See More";
+        btnEl.textContent = "Show More Projects";
         btnEl.style.display = "";
       } else {
         btnEl.style.display = "none";
