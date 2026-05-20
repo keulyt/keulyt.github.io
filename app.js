@@ -188,6 +188,36 @@
     }
   }
 
+  /**
+   * Handles the See More / See Less button click.
+   * "See More" reveals the next 3 projects.
+   * "See Less" collapses back to the initial 3 projects.
+   */
+  function handleToggle() {
+    const allProjects = projectsData.items;
+
+    if (visibleCount >= allProjects.length) {
+     
+      visibleCount = 3;
+    } else {
+     
+      visibleCount = Math.min(allProjects.length, visibleCount + 3);
+    }
+
+    renderProjects();
+
+    const grid = document.getElementById("projectsGrid");
+    if (visibleCount === 3) {
+      grid.scrollIntoView({ behavior: "smooth", block: "start" });
+    } else {
+      const lastVisibleCard = grid.lastElementChild;
+      if (lastVisibleCard) {
+        lastVisibleCard.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      }
+    }
+  }
+
+
 
   function renderTestimonials() {
     const track = document.getElementById("testimonialsTrack");
