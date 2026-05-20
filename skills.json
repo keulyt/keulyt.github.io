@@ -2,53 +2,53 @@
   "categories": [
     {
       "icon": "servers",
-      "title": "Orchestration & Containers",
+      "title": "Platform Engineering & Kubernetes",
       "skills": [
-        { "name": "Kubernetes (Helm, Rancher, ECS)", "level": 95 },
-        { "name": "Docker", "level": 92 },
-        { "name": "Container Security", "level": 88 }
+        { "name": "Kubernetes (EKS, RKE2)", "level": 95 },
+        { "name": "Helm & Rancher", "level": 90 },
+        { "name": "Platform Operations & Cluster Lifecycle", "level": 92 }
       ]
     },
     {
       "icon": "lightning",
-      "title": "CI/CD & Build Tools",
+      "title": "CI/CD & DevSecOps",
       "skills": [
-        { "name": "Jenkins", "level": 92 },
-        { "name": "GitLab CI", "level": 88 },
-        { "name": "AWS CodeBuild", "level": 80 }
+        { "name": "GitLab CI/CD", "level": 95 },
+        { "name": "Jenkins Pipeline Automation", "level": 90 },
+        { "name": "DevSecOps Integration & Secure Delivery", "level": 88 }
       ]
     },
     {
       "icon": "cloud",
-      "title": "Cloud & Infrastructure",
+      "title": "Cloud & Infrastructure Automation",
       "skills": [
-        { "name": "AWS (EC2, S3, IAM, CloudFront, CloudFormation)", "level": 92 },
-        { "name": "Terraform", "level": 90 },
-        { "name": "Ansible", "level": 88 }
+        { "name": "AWS Cloud Infrastructure", "level": 90 },
+        { "name": "Terraform", "level": 92 },
+        { "name": "Ansible", "level": 90 }
       ]
     },
     {
       "icon": "database",
-      "title": "Databases & Monitoring",
+      "title": "Observability & Reliability",
       "skills": [
-        { "name": "PostgreSQL, MySQL, MongoDB, Redis", "level": 85 },
-        { "name": "Prometheus, Datadog, Splunk, Coroot", "level": 88 }
+        { "name": "Prometheus, Grafana, Datadog, Coroot", "level": 88 },
+        { "name": "Production Support & Incident Troubleshooting", "level": 90 }
       ]
     },
     {
       "icon": "code",
-      "title": "Languages & Systems",
+      "title": "Systems & Automation",
       "skills": [
-        { "name": "Go, Python, YAML, HTML", "level": 85 },
-        { "name": "Linux (CentOS, Ubuntu), Windows, macOS", "level": 92 }
+        { "name": "Linux (RHEL, CentOS, Ubuntu)", "level": 92 },
+        { "name": "Python, Bash, Go, PowerShell", "level": 85 }
       ]
     },
     {
       "icon": "network",
-      "title": "Networking & Security",
+      "title": "Security & Enterprise Engineering",
       "skills": [
-        { "name": "TCP/IP, DNS, VPN", "level": 88 },
-        { "name": "DevSecOps & Compliance", "level": 90 }
+        { "name": "Container Security & DevSecOps Compliance", "level": 88 },
+        { "name": "Secure Enterprise Platform Engineering", "level": 92 }
       ]
     }
   ]
