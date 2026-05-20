@@ -13,9 +13,9 @@
       "icon": "lightning",
       "title": "CI/CD & DevSecOps",
       "skills": [
-        { "name": "GitLab CI/CD", "level": 95 },
-        { "name": "Jenkins Pipeline Automation", "level": 90 },
-        { "name": "DevSecOps Integration & Secure Delivery", "level": 88 }
+        { "name": "GitLab CI/CD & Jenkins", "level": 95 },
+        { "name": "GitOps Workflows (ArgoCD, GitLab)", "level": 85 },
+        { "name": "DevSecOps Integration & Secure Delivery", "level": 90 }
       ]
     },
     {
@@ -32,7 +32,8 @@
       "title": "Observability & Reliability",
       "skills": [
         { "name": "Prometheus, Grafana, Datadog, Coroot", "level": 88 },
-        { "name": "Production Support & Incident Troubleshooting", "level": 90 }
+        { "name": "Production Support & Incident Troubleshooting", "level": 90 },
+        { "name": "Backup & Disaster Recovery (Velero)", "level": 85 }
       ]
     },
     {
@@ -40,15 +41,17 @@
       "title": "Systems & Automation",
       "skills": [
         { "name": "Linux (RHEL, CentOS, Ubuntu)", "level": 92 },
-        { "name": "Python, Bash, Go, PowerShell", "level": 85 }
+        { "name": "Python, Bash, Go, PowerShell", "level": 85 },
+        { "name": "Docker, Podman, Buildah, Kaniko", "level": 88 }
       ]
     },
     {
       "icon": "network",
-      "title": "Security & Enterprise Engineering",
+      "title": "Security, Identity & Platform Services",
       "skills": [
-        { "name": "Container Security & DevSecOps Compliance", "level": 88 },
-        { "name": "Secure Enterprise Platform Engineering", "level": 92 }
+        { "name": "Identity Integration (OIDC / SSO / Keycloak)", "level": 85 },
+        { "name": "Secrets & Registry Management (Vault, Harbor, Nexus)", "level": 88 },
+        { "name": "Trivy, Grype, Syft, DefectDojo", "level": 85 }
       ]
     }
   ]
