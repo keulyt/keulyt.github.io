@@ -5,6 +5,7 @@
       "title": "Platform Engineering & Kubernetes",
       "skills": [
         { "name": "Kubernetes (EKS, RKE2)", "level": 95 },
+        { "name": "kubectl & k9s", "level": 95 },
         { "name": "Helm & Rancher", "level": 90 },
         { "name": "Platform Operations & Cluster Lifecycle", "level": 92 }
       ]
@@ -23,8 +24,8 @@
       "title": "Cloud & Infrastructure Automation",
       "skills": [
         { "name": "AWS Cloud Infrastructure", "level": 90 },
-        { "name": "Terraform", "level": 92 },
-        { "name": "Ansible", "level": 90 }
+        { "name": "Terraform", "level": 70 },
+        { "name": "Ansible", "level": 70 }
       ]
     },
     {
@@ -32,7 +33,7 @@
       "title": "Observability & Reliability",
       "skills": [
         { "name": "Prometheus, Grafana, Datadog, Coroot", "level": 88 },
-        { "name": "Production Support & Incident Troubleshooting", "level": 90 },
+        { "name": "Production Support & Incident Troubleshooting", "level": 92 },
         { "name": "Backup & Disaster Recovery (Velero)", "level": 85 }
       ]
     },
