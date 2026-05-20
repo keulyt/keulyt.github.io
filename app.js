@@ -106,65 +106,7 @@
     }).join("");
   }
 
-  // function renderProjects() {
-  //   const grid = document.getElementById("projectsGrid");
-
-  //   grid.innerHTML = projectsData.items.map((p) => {
-  //     const imgPrimary = p.image
-  //       ? `<img src="${p.image}" alt="${p.title}" loading="lazy" />`
-  //       : "";
-
-  //     const imgSecondary = p.imageHover
-  //       ? `<img src="${p.imageHover}" alt="${p.title}" loading="lazy" />`
-  //       : imgPrimary;
-
-  //     const features = (p.features || []).map(f => `<li>${f}</li>`).join("");
-
-  //     const tech = (p.tech || []).map(t => {
-  //       if (typeof t === "string") {
-  //         return `<span>${t}</span>`;
-  //       }
-
-  //       return `
-  //         <a
-  //           href="${t.url}"
-  //           target="_blank"
-  //           rel="noopener noreferrer"
-  //           class="tech-link"
-  //         >
-  //           ${t.label}
-  //         </a>
-  //       `;
-  //     }).join("");
-
-  //     const links = (p.links || []).map(l => `
-  //       <a class="proj-btn" href="${l.url}" target="_blank" rel="noopener">
-  //         ${ICONS.external} ${l.label}
-  //       </a>
-  //     `).join("");
-
-  //     return `
-  //       <div class="project-card reveal">
-  //         <div class="project-image-wrap">
-  //           <div class="project-img-primary">${imgPrimary}</div>
-  //           <div class="project-img-secondary">${imgSecondary}</div>
-  //         </div>
-  //         <div class="project-body">
-  //           <h3>${p.title}</h3>
-  //           <p class="proj-desc">${p.description}</p>
-  //           <p class="proj-features-label">Special Features</p>
-  //           <ul class="proj-features">${features}</ul>
-  //           <p class="proj-tech-label">Technologies</p>
-  //           <div class="proj-tech-tags">${tech}</div>
-  //           <hr class="proj-divider" />
-  //           <div class="proj-buttons">${links}</div>
-  //         </div>
-  //       </div>
-  //     `;
-  //   }).join("");
-  // }
-   // --- See More / See Less state ---
-  let visibleCount = 3; // Initial number of visible projects
+   let visibleCount = 3; // Initial number of visible projects
 
   function renderProjects() {
     const grid = document.getElementById("projectsGrid");
