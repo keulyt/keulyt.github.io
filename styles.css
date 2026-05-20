@@ -1019,6 +1019,8 @@ flex: 0 0 50%;
   flex: 0 0 100% !important;
   padding: 0 10px;
 }
+ .proj-toggle-btn { padding: 11px 24px; font-size: 13px; }
+
 }
 
 @media (max-width: 860px) {
