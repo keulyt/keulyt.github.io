@@ -152,6 +152,41 @@
     // Add See More / See Less button
     renderToggleBtn();
   }
+    /**
+   * Renders the See More / See Less toggle button below the projects grid.
+   */
+  function renderToggleBtn() {
+    const allProjects = projectsData.items;
+    let btnEl = document.getElementById("projectsToggleBtn");
+
+    if (!btnEl) {
+      btnEl = document.createElement("button");
+      btnEl.id = "projectsToggleBtn";
+      btnEl.className = "proj-toggle-btn";
+      document.getElementById("projectsGrid").after(btnEl);
+      btnEl.addEventListener("click", handleToggle);
+    }
+
+    // Determine button text and visibility
+    if (visibleCount >= allProjects.length) {
+      // All projects visible → show "See Less"
+      btnEl.textContent = "See Less";
+      btnEl.style.display = "";
+    } else if (visibleCount > 3) {
+      // More than initial 3 but not all → show "See More"
+      btnEl.textContent = "See More";
+      btnEl.style.display = "";
+    } else {
+      // Only initial 3 visible → show "See More" (unless there are 3 or fewer total)
+      if (allProjects.length > 3) {
+        btnEl.textContent = "See More";
+        btnEl.style.display = "";
+      } else {
+        // 3 or fewer total projects → hide button entirely
+        btnEl.style.display = "none";
+      }
+    }
+  }
 
 
   function renderTestimonials() {
