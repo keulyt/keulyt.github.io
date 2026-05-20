@@ -727,6 +727,35 @@ text-align: left;
 }
 
 .proj-btn svg { width: 14px; height: 14px; }
+
+
+/* ===== See More / See Less Toggle Button ===== */
+.proj-toggle-btn {
+  display: block;
+  margin: 32px auto 0;
+  padding: 12px 32px;
+  border-radius: 10px;
+  border: 1.5px solid rgba(0, 191, 255, 0.4);
+  background: transparent;
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.25s, border-color 0.25s, transform 0.2s, box-shadow 0.2s;
+}
+
+.proj-toggle-btn:hover {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(0, 191, 255, 0.15);
+}
+
+.proj-toggle-btn:active {
+  transform: translateY(0);
+}
+
 .projects-action-row {
   display: flex;
   justify-content: center;
